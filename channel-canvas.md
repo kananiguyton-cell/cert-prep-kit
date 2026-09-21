@@ -14,7 +14,11 @@ The skill runs in **Claude Code** (Code + Cowork only — never claude.ai, per C
 - `cert-plans.json`
 
 **Option A — from the shared repo (preferred):**
-1. Clone the `cert-prep-kit` repo from [ (paste repo link here) ].
+1. Clone the `cert-prep-kit` repo (use whichever you can reach):
+   - git.soma: `https://git.soma.salesforce.com/kanani-guyton/cert-prep-kit.git`
+   - GitHub: `https://github.com/kananiguyton-cell/cert-prep-kit.git`
+
+   *Note: the git.soma copy will move to a different enterprise account soon — I'll update this link when it does.*
 2. Copy its `skills/cert-prep/` folder into your own `~/.claude/skills/` directory.
    (On Mac/Linux, from inside the repo: `cp -R skills/cert-prep ~/.claude/skills/`.)
 
