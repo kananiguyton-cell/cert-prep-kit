@@ -14,16 +14,16 @@ const PLANS = {
     name: "Tableau Next Consultant",
     short: "Tableau Next",
     passPct: 65,
-    passNote: "60 questions · 105 min · 65% to pass (~39 correct) · July '26 (262.11) release",
+    passNote: "60 questions · 105 min · 65% to pass (~39 correct) · aligned to the July 262.11 release",
     trail:
       "https://trailhead.salesforce.com/content/learn/trails/prepare-for-your-salesforce-tableau-next-consultant-exam",
     sections: [
       {
         id: "sem",
-        name: "Semantic Models",
+        name: "Data Setup",
         weight: 20,
         gap: "Core",
-        note: "The spine of the exam — everything hangs off semantic models.",
+        note: "Semantic models are the spine of this section — nearly everything hangs off them.",
         items: [
           "Components: semantic data objects, joins, metrics, calculated fields, definitions",
           "Field hygiene for AI agents — descriptions, synonyms, hiding noisy fields",
@@ -50,7 +50,7 @@ const PLANS = {
       },
       {
         id: "embed",
-        name: "Embedding & Interoperability",
+        name: "Embedding, Cross-Cloud & Interoperability",
         weight: 20,
         gap: "Core",
         note: "Likely least-familiar territory as the exam scopes it.",
@@ -91,7 +91,7 @@ const PLANS = {
         gap: "Medium",
         items: [
           "Workspaces: sharing, collections, asset access",
-          "Personal Org (Beta): isolated self-service analyst environments",
+          "Personal Org: isolated self-service analyst environments",
           "Deployment with data kits: sandbox → production",
           "Data Monitoring dashboard (DLO details, execution history)",
         ],
@@ -109,14 +109,14 @@ const PLANS = {
     sections: [
       {
         id: "flow",
-        name: "Campaigns, Flows & Content",
+        name: "Campaign Design, Flow Orchestration & Content",
         weight: 30,
         gap: "Core",
         note: "The heart of MC Next — where you pass or fail.",
         items: [
           "Flow types: segment- vs. record- vs. schedule-triggered; pick per scenario",
           "Marketing flow elements: send, wait, decision, frequency/quiet time",
-          "Personalization: Handlebars vs. merge fields vs. repeaters vs. content variations",
+          "Personalization methods: Handlebars, AMPscript, merge fields, repeaters, content variations — know when to use each (raw AMPscript scripting is out of deep scope)",
           "Data sources feeding personalized content",
           "Activation templates & contact points; source priority order",
           "Landing page components and configuration",
@@ -125,7 +125,7 @@ const PLANS = {
       },
       {
         id: "data",
-        name: "Data 360, Identity & Segmentation",
+        name: "Data Modeling, Identity Resolution & Segmentation",
         weight: 25,
         gap: "Verify",
         note: "Home turf for Data 360 practitioners — verify, don't re-study.",
@@ -163,7 +163,7 @@ const PLANS = {
       },
       {
         id: "ai",
-        name: "Agentforce & AI",
+        name: "Agentforce & AI Innovation",
         weight: 11,
         gap: "Verify",
         items: [
@@ -174,7 +174,7 @@ const PLANS = {
       },
       {
         id: "rpt",
-        name: "Analytics & Insights",
+        name: "Analytics & Performance Insights",
         weight: 8,
         gap: "Verify",
         items: [
@@ -186,7 +186,101 @@ const PLANS = {
     skips:
       "Out of scope per the exam guide: deep AMPscript/SQL, MuleSoft, heavy Apex, external data lake admin. Skim Data 360 fundamentals badges only.",
   },
+  data360: {
+    name: "Data 360 Consultant",
+    short: "Data 360",
+    passPct: 70,
+    passNote: "60 scored questions (+ up to 5 unscored) · 105 min · 70% to pass (~42 correct) · Spring '26 release",
+    trail:
+      "https://trailhead.salesforce.com/content/learn/trails/prepare-for-your-salesforce-data-360-consultant-exam",
+    sections: [
+      {
+        id: "pos",
+        name: "Solution Positioning",
+        weight: 14,
+        gap: "Medium",
+        note: "Consultative framing, not config — practitioners routinely under-study this and lose points here.",
+        items: [
+          "Data 360 key terminology and business value",
+          "Data 360's foundational role in generative and predictive AI",
+          "Identifying initial use cases for Data 360",
+          "Principles of data ethics and governance",
+        ],
+      },
+      {
+        id: "admin",
+        name: "Setup and Administration",
+        weight: 13,
+        gap: "Verify",
+        note: "Home turf if you administer Data 360 daily — verify, don't re-study.",
+        items: [
+          "Configure permissions, permission sets, and org-wide settings",
+          "Apply data governance requirements to platform configuration",
+          "Manage the development lifecycle with available tooling",
+          "Diagnose and troubleshoot common issues with tooling",
+        ],
+      },
+      {
+        id: "ingest",
+        name: "Data Source Connection and Ingestion",
+        weight: 18,
+        gap: "Core",
+        note: "Transformations, ingestion patterns across varied sources, and Zero-Copy collaboration.",
+        items: [
+          "Data transformation capabilities within Data 360",
+          "Ingestion processes & considerations from varied sources",
+          "Data collaboration capabilities, including Zero-Copy",
+        ],
+      },
+      {
+        id: "unify",
+        name: "Harmonization and Unification",
+        weight: 17,
+        gap: "Core",
+        note: "Identity resolution + data modeling — the classic make-or-break section.",
+        items: [
+          "Purpose, process, and supported use cases of unification (identity resolution)",
+          "Data modeling in Data 360 (DMOs, mapping)",
+        ],
+      },
+      {
+        id: "insights",
+        name: "Data Enhancements, Sharing, and Analysis",
+        weight: 18,
+        gap: "Medium",
+        items: [
+          "Enhance data and build insights on unified data (calculated insights)",
+          "Reference Data 360 data from other systems",
+          "View and build reports and dashboards using Data 360",
+          "Apply predictive & generative AI tooling to customer scenarios",
+        ],
+      },
+      {
+        id: "activate",
+        name: "Data Activations and Utilization",
+        weight: 20,
+        gap: "Core",
+        note: "Biggest section on the exam.",
+        items: [
+          "Basic concepts of segmentation and use cases",
+          "Manage segments within Data 360",
+          "Publish activations within Data 360",
+          "Act on data",
+          "Use Data 360 in Salesforce flows",
+        ],
+      },
+    ],
+    skips:
+      "The guide publishes no explicit out-of-scope list. If you implement Data 360 daily, treat Setup/Admin, Ingestion, Unification, and Activations as verify-not-study, and reallocate that time to Solution Positioning's advisory framing (business value, ethics, governance) and the predictive/generative AI tooling scenarios.",
+  },
 };
+
+/* Every entry in PLANS is a product/exam. Add a new one and the whole app
+   picks it up — tabs, quizzes, logging, insights, and research — with no code
+   changes here. These two derived constants are the only "which exams exist"
+   source of truth the views depend on. */
+const EXAM_KEYS = Object.keys(PLANS);
+const DEFAULT_EXAM = EXAM_KEYS[0];
 
 const GAP_STYLE = {
   Core: { bg: "#EEF2FF", fg: "#1B4DD8", label: "Study hard" },
@@ -213,22 +307,72 @@ async function fetchSnapshot() {
   }
 }
 
-/* ---------------- storage helpers ---------------- */
+/* ---------------- storage helpers ----------------
+   Runtime-adaptive so the same file runs in two places:
+   - claude.ai artifacts  → window.storage (async, supports a shared flag)
+   - Cowork / plain web    → localStorage (sync; shared flag is a no-op)
+   Both paths are wrapped in promises and swallow errors, so callers keep
+   using `await sGet/sSet` unchanged.                                        */
+const hasClaudeStorage = () => typeof window !== "undefined" && !!window.storage;
+
 async function sGet(key, shared = false) {
   try {
-    const r = await window.storage.get(key, shared);
-    return r ? JSON.parse(r.value) : null;
+    if (hasClaudeStorage()) {
+      const r = await window.storage.get(key, shared);
+      return r ? JSON.parse(r.value) : null;
+    }
+    const v = window.localStorage.getItem(key);
+    return v ? JSON.parse(v) : null;
   } catch {
     return null;
   }
 }
 async function sSet(key, value, shared = false) {
   try {
-    await window.storage.set(key, JSON.stringify(value), shared);
+    if (hasClaudeStorage()) {
+      await window.storage.set(key, JSON.stringify(value), shared);
+      return true;
+    }
+    window.localStorage.setItem(key, JSON.stringify(value));
     return true;
   } catch {
     return false;
   }
+}
+
+/* ---------------- model call (runtime-adaptive) ----------------
+   - Cowork               → window.cowork.askClaude(prompt)
+   - claude.ai artifacts  → direct fetch to the Messages API (claude.ai injects auth)
+   Returns the model's text; throws on failure so callers can show a fallback.
+   allowWebSearch attaches the web_search tool ONLY on the claude.ai path — in a
+   sandboxed renderer that blocks network calls (Cowork), the fetch path can't
+   run at all, so research falls back to the weekly team digest.
+   VERIFY with Cowork: exact window.cowork.askClaude signature (assumed here to
+   take a prompt string and return the response text).                        */
+async function callModel(prompt, { allowWebSearch = false } = {}) {
+  if (typeof window !== "undefined" && window.cowork && window.cowork.askClaude) {
+    const out = await window.cowork.askClaude(prompt);
+    return (typeof out === "string" ? out : String(out || "")).trim();
+  }
+  const body = {
+    model: "claude-sonnet-4-6",
+    max_tokens: 1000,
+    messages: [{ role: "user", content: prompt }],
+  };
+  if (allowWebSearch) body.tools = [{ type: "web_search_20250305", name: "web_search" }];
+  const r = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  if (!r.ok) throw new Error("http");
+  const data = await r.json();
+  if (data.error) throw new Error("api");
+  return (data.content || [])
+    .filter((b) => b.type === "text")
+    .map((b) => b.text)
+    .join("\n")
+    .trim();
 }
 
 /* ---------------- Exam Bar (signature element) ---------------- */
@@ -371,7 +515,7 @@ function PlansView({ examKey, checked, toggle }) {
 
 /* ---------------- Log outcome view ---------------- */
 function LogView({ onSaved }) {
-  const [exam, setExam] = useState("tableau");
+  const [exam, setExam] = useState(DEFAULT_EXAM);
   const [result, setResult] = useState("pass");
   const [hard, setHard] = useState({});
   const [tip, setTip] = useState("");
@@ -521,7 +665,7 @@ function LogView({ onSaved }) {
 /* ---------------- Insights view ---------------- */
 function InsightsView({ outcomes, loading, snapshot }) {
   const byExam = useMemo(() => {
-    const m = { tableau: [], mcnext: [] };
+    const m = Object.fromEntries(EXAM_KEYS.map((k) => [k, []]));
     outcomes.forEach((o) => m[o.exam] && m[o.exam].push(o));
     return m;
   }, [outcomes]);
@@ -529,7 +673,7 @@ function InsightsView({ outcomes, loading, snapshot }) {
   const teamCard = snapshot ? (
     <div className="rounded-xl p-4 shadow-sm" style={{ background: "#17213B" }}>
       <h3 className="font-semibold text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-        From #cert-prep (team channel)
+        From #claudecode_certprepkit (team channel)
       </h3>
       <p className="mt-1 text-xs" style={{ color: "#AAB6D3" }}>
         Synced {snapshot.generatedAt ? new Date(snapshot.generatedAt).toLocaleDateString() : "recently"} by the weekly
@@ -589,7 +733,7 @@ function InsightsView({ outcomes, loading, snapshot }) {
         <div className="rounded-xl bg-white p-6 text-center shadow-sm">
           <p className="font-medium" style={{ color: "#17213B" }}>No attempts logged in this hub yet</p>
           <p className="mt-1 text-sm" style={{ color: "#5A6478" }}>
-            Best practice: post attempts in #cert-prep so the whole pipeline learns. Logging here works too — pass rates
+            Best practice: post attempts in #claudecode_certprepkit so the whole pipeline learns. Logging here works too — pass rates
             and hardest-section flags appear below.
           </p>
         </div>
@@ -674,33 +818,17 @@ function ResearchView({ snapshot }) {
     setError("");
     try {
       const today = new Date().toISOString().slice(0, 10);
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          model: "claude-sonnet-4-6",
-          max_tokens: 1000,
-          messages: [
-            {
-              role: "user",
-              content: `Today is ${today}. Search the web for the newest enablement and study materials for two Salesforce certifications: (1) Salesforce Certified Tableau Next Consultant, (2) Salesforce Certified Marketing Cloud Next Consultant. Look for: updated exam guides or outline changes, new Trailhead modules or trails, new Trailhead Academy courses, recent release notes affecting exam-relevant features, and community exam-experience writeups. Report only findings from the last ~60 days. Format as short plain-text sections per exam with source names and dates. If nothing new, say so plainly.`,
-            },
-          ],
-          tools: [{ type: "web_search_20250305", name: "web_search" }],
-        }),
-      });
-      const data = await response.json();
-      const text = (data.content || [])
-        .filter((b) => b.type === "text")
-        .map((b) => b.text)
-        .join("\n")
-        .trim();
+      const examList = EXAM_KEYS.map((k, i) => `(${i + 1}) Salesforce Certified ${PLANS[k].name}`).join(", ");
+      const prompt = `Today is ${today}. Search the web for the newest enablement and study materials for these Salesforce certifications: ${examList}. Look for: updated exam guides or outline changes, new Trailhead modules or trails, new Trailhead Academy courses, recent release notes affecting exam-relevant features, and community exam-experience writeups. Report only findings from the last ~60 days. Format as short plain-text sections per exam with source names and dates. If nothing new, say so plainly.`;
+      const text = await callModel(prompt, { allowWebSearch: true });
       if (!text) throw new Error("empty");
       const rec = { text, ranAt: new Date().toLocaleString() };
       setReport(rec);
       await sSet("research-v1", rec);
     } catch {
-      setError("Research call failed — try again in a moment.");
+      setError(
+        "Live web search isn't available here. The weekly team digest above is the dependable source — it runs every Monday and posts to the channel."
+      );
     }
     setBusy(false);
   };
@@ -725,8 +853,9 @@ function ResearchView({ snapshot }) {
           Research newer materials
         </h2>
         <p className="mt-1 text-sm" style={{ color: "#5A6478" }}>
-          Runs a live web search for exam-guide changes, new Trailhead content, and recent exam-experience writeups for
-          both certs. Run it before each study block — both exams track current releases.
+          Best-effort live web search for exam-guide changes and new enablement across every cert. The dependable
+          source is the weekly team digest above (published every Monday) — use this only for an ad-hoc check between
+          digests, and it may be unavailable depending on where the Hub is running.
         </p>
         <button
           onClick={run}
@@ -750,272 +879,9 @@ function ResearchView({ snapshot }) {
   );
 }
 
-/* ---------------- Practice view ---------------- */
-function PracticeView({ outcomes }) {
-  const [examKey, setExamKey] = useState("tableau");
-  const [focus, setFocus] = useState("mix");
-  const [busy, setBusy] = useState(false);
-  const [error, setError] = useState("");
-  const [questions, setQuestions] = useState(null);
-  const [idx, setIdx] = useState(0);
-  const [selected, setSelected] = useState(null);
-  const [answered, setAnswered] = useState(false);
-  const [score, setScore] = useState(0);
-  const [stats, setStats] = useState({});
-
-  const plan = PLANS[examKey];
-
-  useEffect(() => {
-    (async () => {
-      const s = await sGet("practice-v1");
-      if (s) setStats(s);
-    })();
-  }, []);
-
-  const flagCounts = useMemo(() => {
-    const f = {};
-    outcomes
-      .filter((o) => o.exam === examKey)
-      .forEach((o) => (o.hardSections || []).forEach((s) => (f[s] = (f[s] || 0) + 1)));
-    return f;
-  }, [outcomes, examKey]);
-
-  const pickMix = () => {
-    const gapMult = { Core: 1.5, Medium: 1.1, Verify: 0.7 };
-    const weighted = plan.sections.map((s) => ({
-      s,
-      w: s.weight * gapMult[s.gap] * (1 + (flagCounts[s.id] || 0)),
-    }));
-    const total = weighted.reduce((a, x) => a + x.w, 0);
-    const counts = {};
-    for (let i = 0; i < 4; i++) {
-      let r = Math.random() * total;
-      for (const x of weighted) {
-        r -= x.w;
-        if (r <= 0) {
-          counts[x.s.id] = (counts[x.s.id] || 0) + 1;
-          break;
-        }
-      }
-    }
-    return counts;
-  };
-
-  const generate = async () => {
-    setBusy(true);
-    setError("");
-    setQuestions(null);
-    try {
-      const counts = focus === "mix" ? pickMix() : { [focus]: 4 };
-      const specs = Object.entries(counts)
-        .map(([sid, n]) => {
-          const sec = plan.sections.find((s) => s.id === sid);
-          return `- ${n} question(s) on "${sec.name}" (id: ${sid}). Topics: ${sec.items.join("; ")}`;
-        })
-        .join("\n");
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          model: "claude-sonnet-4-6",
-          max_tokens: 1000,
-          messages: [
-            {
-              role: "user",
-              content: `You write practice questions for the Salesforce Certified ${plan.name} exam. Write exactly 4 consultant-style, scenario-based multiple-choice questions distributed as:\n${specs}\n\nStyle: "Given a scenario..." phrasing where natural; answers should favor governed, out-of-box, low-maintenance solutions as real exam keys do; distractors must be plausible. Keep each question under 45 words and each explanation under 30 words.\n\nRespond with ONLY a raw JSON array, no markdown fences, no preamble. Each element: {"section":"<section id>","question":"...","options":["...","...","...","..."],"correct":<0-3>,"explanation":"..."}`,
-            },
-          ],
-        }),
-      });
-      const data = await response.json();
-      const text = (data.content || [])
-        .filter((b) => b.type === "text")
-        .map((b) => b.text)
-        .join("\n")
-        .replace(/```json|```/g, "")
-        .trim();
-      const parsed = JSON.parse(text);
-      if (!Array.isArray(parsed) || !parsed.length) throw new Error("bad shape");
-      setQuestions(parsed);
-      setIdx(0);
-      setSelected(null);
-      setAnswered(false);
-      setScore(0);
-    } catch {
-      setError("Question generation failed — tap generate again.");
-    }
-    setBusy(false);
-  };
-
-  const submit = async () => {
-    if (selected === null) return;
-    const q = questions[idx];
-    const right = selected === q.correct;
-    if (right) setScore((s) => s + 1);
-    setAnswered(true);
-    const key = `${examKey}:${q.section}`;
-    const next = {
-      ...stats,
-      [key]: { right: (stats[key]?.right || 0) + (right ? 1 : 0), total: (stats[key]?.total || 0) + 1 },
-    };
-    setStats(next);
-    await sSet("practice-v1", next);
-  };
-
-  const q = questions ? questions[idx] : null;
-  const finished = questions && answered && idx === questions.length - 1;
-
-  return (
-    <div className="space-y-4">
-      <div className="rounded-xl bg-white p-4 shadow-sm">
-        <h2 className="text-lg font-semibold" style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#17213B" }}>
-          Practice questions
-        </h2>
-        <p className="mt-1 text-sm" style={{ color: "#5A6478" }}>
-          AI-generated scenario questions, freshly written each round. The weighted mix leans toward heavier sections,
-          your study-hard areas, and anything the community has flagged hardest.
-        </p>
-        <div className="mt-3 flex gap-2">
-          {Object.entries(PLANS).map(([k, p]) => (
-            <button
-              key={k}
-              onClick={() => { setExamKey(k); setFocus("mix"); setQuestions(null); }}
-              className="rounded-lg px-3 py-1.5 text-sm font-medium"
-              style={{ background: examKey === k ? "#1B4DD8" : "#E4E8F2", color: examKey === k ? "#FFFFFF" : "#17213B" }}
-            >
-              {p.short}
-            </button>
-          ))}
-        </div>
-        <div className="mt-3">
-          <p className="mb-1 text-sm font-medium" style={{ color: "#17213B" }}>Focus</p>
-          <div className="flex flex-wrap gap-2">
-            <button
-              onClick={() => setFocus("mix")}
-              className="rounded-full px-3 py-1 text-xs font-medium"
-              style={{ background: focus === "mix" ? "#17213B" : "#E4E8F2", color: focus === "mix" ? "#FFFFFF" : "#17213B" }}
-            >
-              Weighted mix
-            </button>
-            {plan.sections.map((s) => (
-              <button
-                key={s.id}
-                onClick={() => setFocus(s.id)}
-                className="rounded-full px-3 py-1 text-xs font-medium"
-                style={{ background: focus === s.id ? "#17213B" : "#E4E8F2", color: focus === s.id ? "#FFFFFF" : "#17213B" }}
-              >
-                {s.name}
-                {flagCounts[s.id] ? " ⚑" : ""}
-              </button>
-            ))}
-          </div>
-        </div>
-        <button
-          onClick={generate}
-          disabled={busy}
-          className="mt-4 w-full rounded-lg py-2.5 text-sm font-semibold text-white"
-          style={{ background: "#1B4DD8", opacity: busy ? 0.6 : 1 }}
-        >
-          {busy ? "Writing questions…" : questions ? "Generate a new round" : "Generate 4 questions"}
-        </button>
-        {error && <p className="mt-2 text-sm font-medium" style={{ color: "#B3372B" }}>{error}</p>}
-      </div>
-
-      {q && (
-        <div className="rounded-xl bg-white p-4 shadow-sm">
-          <div className="flex items-center justify-between text-xs" style={{ color: "#5A6478" }}>
-            <span>
-              Question {idx + 1} of {questions.length} ·{" "}
-              {plan.sections.find((s) => s.id === q.section)?.name || q.section}
-            </span>
-            <span>Score {score}/{questions.length}</span>
-          </div>
-          <p className="mt-2 text-sm font-medium" style={{ color: "#17213B" }}>{q.question}</p>
-          <div className="mt-3 space-y-2">
-            {q.options.map((opt, i) => {
-              let bg = "#F4F6FB";
-              let fg = "#17213B";
-              if (answered) {
-                if (i === q.correct) { bg = "#178A5E"; fg = "#FFFFFF"; }
-                else if (i === selected) { bg = "#B3372B"; fg = "#FFFFFF"; }
-              } else if (i === selected) { bg = "#1B4DD8"; fg = "#FFFFFF"; }
-              return (
-                <button
-                  key={i}
-                  onClick={() => !answered && setSelected(i)}
-                  className="w-full rounded-lg p-2.5 text-left text-sm"
-                  style={{ background: bg, color: fg }}
-                >
-                  {opt}
-                </button>
-              );
-            })}
-          </div>
-          {!answered ? (
-            <button
-              onClick={submit}
-              disabled={selected === null}
-              className="mt-3 w-full rounded-lg py-2 text-sm font-semibold text-white"
-              style={{ background: "#17213B", opacity: selected === null ? 0.4 : 1 }}
-            >
-              Check answer
-            </button>
-          ) : (
-            <>
-              <p className="mt-3 rounded-lg p-2.5 text-sm" style={{ background: "#F4F6FB", color: "#17213B" }}>
-                {q.explanation}
-              </p>
-              {!finished ? (
-                <button
-                  onClick={() => { setIdx(idx + 1); setSelected(null); setAnswered(false); }}
-                  className="mt-3 w-full rounded-lg py-2 text-sm font-semibold text-white"
-                  style={{ background: "#1B4DD8" }}
-                >
-                  Next question
-                </button>
-              ) : (
-                <p className="mt-3 text-center text-sm font-semibold" style={{ color: score >= 3 ? "#178A5E" : "#B45309" }}>
-                  Round done: {score}/{questions.length}. {score >= 3 ? "Exam-ready pace." : "Re-read that section, then run another round."}
-                </p>
-              )}
-            </>
-          )}
-        </div>
-      )}
-
-      {Object.keys(stats).some((k) => k.startsWith(examKey + ":")) && (
-        <div className="rounded-xl bg-white p-4 shadow-sm">
-          <p className="text-sm font-medium" style={{ color: "#17213B" }}>Your lifetime accuracy — {plan.short}</p>
-          <ul className="mt-2 space-y-1">
-            {plan.sections.map((s) => {
-              const st = stats[`${examKey}:${s.id}`];
-              if (!st) return null;
-              const pct = Math.round((st.right / st.total) * 100);
-              return (
-                <li key={s.id} className="flex items-center justify-between text-sm" style={{ color: "#17213B" }}>
-                  <span>{s.name}</span>
-                  <span
-                    className="rounded-full px-2 py-0.5 text-xs font-medium"
-                    style={{
-                      background: pct >= 70 ? "#E7F6EF" : "#FDECEA",
-                      color: pct >= 70 ? "#178A5E" : "#B3372B",
-                    }}
-                  >
-                    {pct}% ({st.right}/{st.total})
-                  </span>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      )}
-    </div>
-  );
-}
-
 /* ---------------- Practice quiz view ---------------- */
 function QuizView({ outcomes, snapshot }) {
-  const [exam, setExam] = useState("tableau");
+  const [exam, setExam] = useState(DEFAULT_EXAM);
   const [phase, setPhase] = useState("setup"); // setup | loading | quiz | done
   const [questions, setQuestions] = useState([]);
   const [idx, setIdx] = useState(0);
@@ -1055,27 +921,9 @@ function QuizView({ outcomes, snapshot }) {
             }). Topics: ${s.items.join("; ")}`
         )
         .join("\n");
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          model: "claude-sonnet-4-6",
-          max_tokens: 1000,
-          messages: [
-            {
-              role: "user",
-              content: `You write practice questions for the Salesforce Certified ${plan.name} exam. Exam sections:\n${sectionSpec}\n\nWrite exactly 4 consultant-style, scenario-based multiple-choice questions ("Given a scenario..." style, one clearly best answer, plausible distractors, concise wording). Distribute across sections roughly by exam weight, giving extra to any section marked PRIORITIZE. Respond with ONLY a JSON array — no markdown fences, no preamble: [{"section":"<section id>","question":"...","options":["...","...","...","..."],"correctIndex":0,"explanation":"one short sentence on why"}]`,
-            },
-          ],
-        }),
-      });
-      const data = await response.json();
-      const text = (data.content || [])
-        .filter((b) => b.type === "text")
-        .map((b) => b.text)
-        .join("")
-        .replace(/```json|```/g, "")
-        .trim();
+      const prompt = `You write practice questions for the Salesforce Certified ${plan.name} exam. Exam sections:\n${sectionSpec}\n\nWrite exactly 4 consultant-style, scenario-based multiple-choice questions ("Given a scenario..." style, one clearly best answer, plausible distractors, concise wording). Distribute across sections roughly by exam weight, giving extra to any section marked PRIORITIZE. Respond with ONLY a JSON array — no markdown fences, no preamble: [{"section":"<section id>","question":"...","options":["...","...","...","..."],"correctIndex":0,"explanation":"one short sentence on why"}]`;
+      const raw = await callModel(prompt);
+      const text = raw.replace(/```json|```/g, "").trim();
       const qs = JSON.parse(text);
       if (!Array.isArray(qs) || !qs.length) throw new Error("bad payload");
       setQuestions(qs);
@@ -1263,7 +1111,7 @@ function QuizView({ outcomes, snapshot }) {
 /* ---------------- App ---------------- */
 export default function CertPrepHub() {
   const [view, setView] = useState("plans");
-  const [examKey, setExamKey] = useState("tableau");
+  const [examKey, setExamKey] = useState(DEFAULT_EXAM);
   const [checked, setChecked] = useState({});
   const [loaded, setLoaded] = useState(false);
   const [outcomes, setOutcomes] = useState([]);

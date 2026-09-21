@@ -1,0 +1,311 @@
+{
+  "meta": {
+    "version": "2.0",
+    "updated": "2026-09-18",
+    "builtFor": "Salesforce Success Architects and the broader team",
+    "strategy": "80/20 by real exam section weights. This file is the objective exam structure (sections, weights, official topics, pass marks, trails, suggested sequences). Per-user personalization — which sections are a candidate's strength vs. gap — is decided interactively by the cert-prep skill, not baked here. Add a new exam by adding one entry under \"exams\"; the skill and the facilitator dashboard both read this file.",
+    "gapLegend": {
+      "Core": "Study hard — high weight and/or commonly missed.",
+      "Medium": "Medium lift — best-practice judgment or moderate depth.",
+      "Verify": "Verify, don't re-study — usually home turf for daily practitioners; confirm rather than relearn."
+    }
+  },
+  "exams": {
+    "tableau": {
+      "name": "Tableau Next Consultant",
+      "short": "Tableau Next",
+      "passPct": 65,
+      "passNote": "60 questions · 105 min · 65% to pass (~39 correct) · aligned to the July 262.11 release",
+      "price": "$200 / $100 retake",
+      "trail": "https://trailhead.salesforce.com/content/learn/trails/prepare-for-your-salesforce-tableau-next-consultant-exam",
+      "sections": [
+        {
+          "id": "sem",
+          "name": "Data Setup",
+          "weight": 20,
+          "gap": "Core",
+          "note": "Semantic models are the spine of this section — nearly everything hangs off them.",
+          "items": [
+            "Components: semantic data objects, joins, metrics, calculated fields, definitions",
+            "Field hygiene for AI agents — descriptions, synonyms, hiding noisy fields",
+            "Semantic Model AI Optimization (Beta): score & improve models",
+            "AI-Generated Descriptions (Beta)",
+            "Marketplace semantic model templates",
+            "Complete the Tableau Semantics badge (45 min)"
+          ]
+        },
+        {
+          "id": "agent",
+          "name": "Agentic Experiences",
+          "weight": 25,
+          "gap": "Core",
+          "note": "Biggest section on the exam.",
+          "items": [
+            "Tableau/Analytics Agent: conversational Q&A grounded in semantics",
+            "Verified questions & business preferences — calibrating Q&A accuracy",
+            "Agentic readiness: what makes a model agent-ready",
+            "Inspector proactive data alerts (Beta) — threshold notifications",
+            "Draft with Einstein / natural-language data prep",
+            "Read: Plan Your Tableau Agent Implementation"
+          ]
+        },
+        {
+          "id": "embed",
+          "name": "Embedding, Cross-Cloud & Interoperability",
+          "weight": 20,
+          "gap": "Core",
+          "note": "Likely least-familiar territory as the exam scopes it.",
+          "items": [
+            "Embed dashboards in Lightning pages and Slack",
+            "Slack integration: rich previews + MCP server (ask Slackbot about data)",
+            "Tableau Next Apps for Salesforce + Marketplace offerings",
+            "APIs/SDKs and App Template Framework — know what each is for",
+            "Positioning vs. other Salesforce analytics (CRM Analytics)"
+          ]
+        },
+        {
+          "id": "viz",
+          "name": "Visualizations & Dashboards",
+          "weight": 15,
+          "gap": "Medium",
+          "note": "Mostly best-practice judgment questions.",
+          "items": [
+            "Dashboard design best practices",
+            "Actions: navigation links, object actions, single-click actions firing Flows/URLs"
+          ]
+        },
+        {
+          "id": "admin",
+          "name": "Setup, Admin & Security",
+          "weight": 10,
+          "gap": "Medium",
+          "items": [
+            "Guided setup; activating features incl. Agentic Analytics for users",
+            "Permission sets & licenses — which enables what",
+            "Row-Level Security (RLS) and object-level governance"
+          ]
+        },
+        {
+          "id": "ws",
+          "name": "Workspaces, Orgs & Deployment",
+          "weight": 10,
+          "gap": "Medium",
+          "items": [
+            "Workspaces: sharing, collections, asset access",
+            "Personal Org: isolated self-service analyst environments",
+            "Deployment with data kits: sandbox → production",
+            "Data Monitoring dashboard (DLO details, execution history)"
+          ]
+        }
+      ],
+      "skips": "Skim only: Data 360 foundation modules (Setup, Connectors, Data & Identity) if you already work in Data 360 daily.",
+      "sequence": [
+        "Session 1 (2 hrs): Tableau Semantics badge + semantic model articles (incl. both Betas)",
+        "Session 2 (2 hrs): Agentic Experiences — Tableau Agent, verified questions, alerts, implementation planning",
+        "Session 3 (1.5 hrs): Embedding + Slack + MCP + Marketplace + APIs overview",
+        "Session 4 (1.5 hrs): Setup/permissions/RLS + workspaces/Personal Org/data kit deployment",
+        "Session 5 (1 hr): Visualization actions + full exam-guide re-read; self-quiz each outline bullet ('could I answer a scenario on this?')",
+        "Hands-on multiplier: spin up Tableau Next in a demo org and build one semantic model → viz → dashboard → ask the Agent. One hour of this replaces three of reading."
+      ]
+    },
+    "mcnext": {
+      "name": "Marketing Cloud Next Consultant",
+      "short": "MC Next",
+      "passPct": 72,
+      "passNote": "60 questions · 105 min · 72% to pass (~44 correct — only ~16 wrong allowed) · Summer '26 release",
+      "price": "$200 / $100 retake",
+      "trail": "https://trailhead.salesforce.com/content/learn/trails/prepare-for-your-marketing-cloud-next-consultant-certification",
+      "sections": [
+        {
+          "id": "flow",
+          "name": "Campaign Design, Flow Orchestration & Content",
+          "weight": 30,
+          "gap": "Core",
+          "note": "The heart of MC Next — where you pass or fail.",
+          "items": [
+            "Flow types: segment- vs. record- vs. schedule-triggered; pick per scenario",
+            "Marketing flow elements: send, wait, decision, frequency/quiet time",
+            "Personalization methods: Handlebars, AMPscript, merge fields, repeaters, content variations — know when to use each (raw AMPscript scripting is out of deep scope)",
+            "Data sources feeding personalized content",
+            "Activation templates & contact points; source priority order",
+            "Landing page components and configuration",
+            "Badges: Email Content & Personalization + Campaign Optimization with Flows"
+          ]
+        },
+        {
+          "id": "data",
+          "name": "Data Modeling, Identity Resolution & Segmentation",
+          "weight": 25,
+          "gap": "Verify",
+          "note": "Home turf for Data 360 practitioners — verify, don't re-study.",
+          "items": [
+            "Actionable Lists from CRM data for segmentation/activation",
+            "Consumption entitlements & Digital Wallet — marketing-flavored credit scenarios",
+            "Identity resolution match & reconciliation rules (refresher)",
+            "Segmentation → activation path in MC Next context"
+          ]
+        },
+        {
+          "id": "setup",
+          "name": "Platform Setup & Governance",
+          "weight": 13,
+          "gap": "Medium",
+          "items": [
+            "Core Org editions, Data 360 provisioning, Marketing Data Kit, permission sets",
+            "Business Units ↔ Data Spaces 1:1 — isolation scenarios; when BUs are required",
+            "Roles + Enhanced CMS Workspaces for content governance",
+            "Domain authentication vs. authorization (DKIM/SPF); dedicated IP guardrails"
+          ]
+        },
+        {
+          "id": "consent",
+          "name": "Consent",
+          "weight": 13,
+          "gap": "Core",
+          "note": "Entirely new subsystem for most candidates; heavily scenario-tested.",
+          "items": [
+            "Platform consent object model and relationships",
+            "Creating/updating consent records: forms, flows, API — when each fits",
+            "Consent banners on marketing and external landing pages",
+            "Compliance framing: opt-in models, engagement rules"
+          ]
+        },
+        {
+          "id": "ai",
+          "name": "Agentforce & AI Innovation",
+          "weight": 11,
+          "gap": "Verify",
+          "items": [
+            "Out-of-box Marketing Agents: campaign creation, audience gen, content gen",
+            "Conversational messaging across SMS / email / WhatsApp",
+            "Which predictive AI feature fits a scenario (STO, engagement scoring…)"
+          ]
+        },
+        {
+          "id": "rpt",
+          "name": "Analytics & Performance Insights",
+          "weight": 8,
+          "gap": "Verify",
+          "items": [
+            "Pre-built dashboard catalog — which dashboard answers which requirement",
+            "Surfacing marketing data & insights across the platform"
+          ]
+        }
+      ],
+      "skips": "Out of scope per the exam guide: deep AMPscript/SQL, MuleSoft, heavy Apex, external data lake admin. Skim Data 360 fundamentals badges only.",
+      "sequence": [
+        "Session 1 (2 hrs): MC Next Basics badge + Setup articles + BU/Data Space model",
+        "Session 2 (2 hrs): Email Sending Essentials + domain auth (DKIM/SPF)",
+        "Session 3 (2.5 hrs): Flows deep-dive — flow types, elements, triggers; Campaign Optimization badge",
+        "Session 4 (2 hrs): Personalization (Handlebars, merge fields, repeaters, variations) + contact points/activation templates + landing pages",
+        "Session 5 (2 hrs): Consent — object model, record management, banners",
+        "Session 6 (1.5 hrs): Marketing Agents + conversational messaging + predictive AI features; dashboards; Digital Wallet marketing scenarios",
+        "Session 7 (1 hr): Exam-guide outline self-quiz — every bullet phrased as 'given a scenario…'; drill anything shaky",
+        "Hands-on multiplier: build one segment-triggered flow with a personalized email in a demo org, and click through Consent objects in Setup once. The object relationships stick 10x faster seen live."
+      ]
+    },
+    "data360": {
+      "name": "Data 360 Consultant",
+      "short": "Data 360",
+      "passPct": 70,
+      "passNote": "60 scored questions (+ up to 5 unscored) · 105 min · 70% to pass (~42 correct) · Spring '26 release",
+      "price": "$200 / $100 retake",
+      "trail": "https://trailhead.salesforce.com/content/learn/trails/prepare-for-your-salesforce-data-360-consultant-exam",
+      "sections": [
+        {
+          "id": "pos",
+          "name": "Solution Positioning",
+          "weight": 14,
+          "gap": "Medium",
+          "note": "Consultative framing, not config — practitioners routinely under-study this and lose points here.",
+          "items": [
+            "Data 360 key terminology and business value",
+            "Data 360's foundational role in generative and predictive AI",
+            "Identifying initial use cases for Data 360",
+            "Principles of data ethics and governance"
+          ]
+        },
+        {
+          "id": "admin",
+          "name": "Setup and Administration",
+          "weight": 13,
+          "gap": "Verify",
+          "note": "Home turf if you administer Data 360 daily — verify, don't re-study.",
+          "items": [
+            "Configure permissions, permission sets, and org-wide settings",
+            "Apply data governance requirements to platform configuration",
+            "Manage the development lifecycle with available tooling",
+            "Diagnose and troubleshoot common issues with tooling"
+          ]
+        },
+        {
+          "id": "ingest",
+          "name": "Data Source Connection and Ingestion",
+          "weight": 18,
+          "gap": "Core",
+          "note": "Transformations, ingestion patterns across varied sources, and Zero-Copy collaboration.",
+          "items": [
+            "Data transformation capabilities within Data 360",
+            "Ingestion processes & considerations from varied sources",
+            "Data collaboration capabilities, including Zero-Copy"
+          ]
+        },
+        {
+          "id": "unify",
+          "name": "Harmonization and Unification",
+          "weight": 17,
+          "gap": "Core",
+          "note": "Identity resolution + data modeling — the classic make-or-break section.",
+          "items": [
+            "Purpose, process, and supported use cases of unification (identity resolution)",
+            "Data modeling in Data 360 (DMOs, mapping)"
+          ]
+        },
+        {
+          "id": "insights",
+          "name": "Data Enhancements, Sharing, and Analysis",
+          "weight": 18,
+          "gap": "Medium",
+          "items": [
+            "Enhance data and build insights on unified data (calculated insights)",
+            "Reference Data 360 data from other systems",
+            "View and build reports and dashboards using Data 360",
+            "Apply predictive & generative AI tooling to customer scenarios"
+          ]
+        },
+        {
+          "id": "activate",
+          "name": "Data Activations and Utilization",
+          "weight": 20,
+          "gap": "Core",
+          "note": "Biggest section on the exam.",
+          "items": [
+            "Basic concepts of segmentation and use cases",
+            "Manage segments within Data 360",
+            "Publish activations within Data 360",
+            "Act on data",
+            "Use Data 360 in Salesforce flows"
+          ]
+        }
+      ],
+      "skips": "The guide publishes no explicit out-of-scope list. If you implement Data 360 daily, treat Setup/Admin, Ingestion, Unification, and Activations as verify-not-study, and reallocate that time to Solution Positioning's advisory framing (business value, ethics, governance) and the predictive/generative AI tooling scenarios.",
+      "sequence": [
+        "Session 1 (1.5 hrs): Solution Positioning — business value, initial use cases, data ethics & governance (the advisory framing practitioners skip and lose points on)",
+        "Session 2 (2 hrs): Data Source Connection & Ingestion — transformations, ingestion patterns across sources, Zero-Copy collaboration",
+        "Session 3 (2 hrs): Harmonization & Unification — identity resolution purpose/process, DMOs and data modeling (the make-or-break section)",
+        "Session 4 (2 hrs): Data Activations & Utilization — segmentation concepts, managing segments, publishing activations, acting on data, Data 360 in flows (biggest section at 20%)",
+        "Session 5 (1.5 hrs): Data Enhancements/Sharing/Analysis — calculated insights, referencing Data 360 elsewhere, reports/dashboards, predictive & generative AI tooling; then a verify pass on Setup & Administration",
+        "Hands-on multiplier: in a demo org, ingest one source → run unification → build a calculated insight → publish an activation. Seeing the pipeline end-to-end beats hours of reading."
+      ]
+    }
+  },
+  "crossExamCheats": {
+    "sharedBackbone": "Study once, use across exams: DMOs, identity resolution, segmentation, Data 360 provisioning, consumption/credits, and Agentforce grounding concepts. All three exams reward 'agent readiness' — clean metadata, good descriptions, governed access.",
+    "technique": [
+      "These are consultant exams: answers favor 'given a scenario, what would you advise' — pick the governed, out-of-box, lowest-maintenance option over the clever custom one.",
+      "Watch for Beta-labeled features (e.g. Semantic Model AI Optimization, AI-Generated Descriptions, Inspector proactive alerts) — new exams love testing brand-new features.",
+      "105 min / 60 Q = 1:45 per question. Flag and move on; first instinct on scenario questions is usually right.",
+      "Wrong-answer patterns: options requiring AMPscript/Apex/custom LLMs (MC Next) or external Tableau Server/Cloud concepts that don't apply to Tableau Next."
+    ]
+  }
+}

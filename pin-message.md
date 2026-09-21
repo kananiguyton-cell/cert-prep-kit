@@ -1,4 +1,4 @@
-# Pin Message for #cert-prep
+# Pin Message for #claudecode_certprepkit
 
 Copy this into Slack, then pin it along with the channel guide document itself.
 

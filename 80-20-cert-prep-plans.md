@@ -1,5 +1,9 @@
 # 80/20 Cert Prep Plans — Tableau Next & Marketing Cloud Next Consultant
 
+> ⚠️ **Superseded (kept for reference).** The canonical, up-to-date plans now live in
+> `cert-plans.json` (all three exams, including Data 360) and are delivered interactively by the
+> `cert-prep` Claude Code skill. This file covers only 2 exams and is no longer maintained.
+
 **Built for:** Kanani Guyton — Senior SA, Agentforce + Data 360 specialist
 **Strategy:** Skip what you already live daily (Data 360), concentrate on the product-specific layers each exam actually tests.
 
@@ -11,7 +15,7 @@
 
 ## Quick Facts
 - 60 scored questions, 105 minutes, **65% to pass (~39 correct)**
-- Aligned to July '26 (262.11) release
+- Aligned to the July 262.11 release
 - $200 / $100 retake
 
 ## Section Weights & Your Effort Level
@@ -56,7 +60,7 @@ Likely your least-familiar territory as scoped by the exam:
 
 ### 4. Workspaces, Orgs & Deployment (~1 hr)
 - Workspaces: content sharing, collections, asset access management
-- **Personal Org (Beta)** — isolated self-service analyst environments; how they relate to shared workspaces
+- **Personal Org** — isolated self-service analyst environments; how they relate to shared workspaces
 - **Deployment: data kits, sandbox → production migration**
 - Data Monitoring dashboard (DLO details, execution history)
 
@@ -113,7 +117,7 @@ Mostly best-practice judgment questions:
 This is the heart of MC Next and probably your biggest gap:
 - **Flow types for marketing**: segment-triggered vs. record-triggered vs. schedule-triggered — given a scenario, pick the type, trigger conditions, and config
 - **Marketing flow elements** in Flow Builder: Send Email/SMS/WhatsApp, Wait/Time Delay, Decision splits, frequency/quiet-time settings
-- **Personalization methods** — know when to use each: Handlebars expressions vs. merge fields vs. repeaters vs. content variations (AMPscript = recognize only; explicitly out of deep scope)
+- **Personalization methods** — the exam names five: Handlebars, **AMPscript**, merge fields, repeaters, content variations. Know when to use each. (AMPscript is an in-scope *method to recognize and select*; only **writing raw programmatic AMPscript** is out of deep scope.)
 - **Data sources for personalization** — which source feeds what content
 - **Activation templates & contact points** — selecting the right contact point value, source priority order
 - Landing page components and configuration
@@ -140,7 +144,7 @@ Almost certainly unfamiliar and heavily scenario-tested:
 - **Analytics (8%)**: pre-built dashboard catalog — which dashboard answers which requirement; surfacing marketing data across the platform
 
 ### SKIP
-- Deep AMPscript/SQL, MuleSoft, Apex, external data lake admin — explicitly out of scope per the exam guide
+- Out of deep scope per the exam guide: writing raw programmatic AMPscript or heavy SQL; custom LLMs / external AI transformer architectures; complex MuleSoft API integrations or extensive Apex (*unless* establishing basic data providers for high-throughput transactional sending); raw external data-lake DB admin (*outside* standard Zero Copy or Data Share connections with Data 360)
 - Data 360 fundamentals badges in the trail (Ingest/Harmonize/Unify, Segment & Activate) — skim titles only
 
 **Trail:** [Prepare for Your Marketing Cloud Next Consultant Certification](https://trailhead.salesforce.com/content/learn/trails/prepare-for-your-marketing-cloud-next-consultant-certification) (~17.5 hrs full; **~10-11 hrs your version**)
@@ -163,6 +167,6 @@ Almost certainly unfamiliar and heavily scenario-tested:
 
 **Exam technique for both:**
 - These are consultant exams: answers favor *"given a scenario, what would you advise"* — pick the governed, out-of-box, lowest-maintenance option over the clever custom one.
-- Watch for Beta-labeled features (Personal Org, AI Optimization, Inspector alerts) — new exams love testing brand-new features because that's what distinguishes current knowledge.
+- Watch for Beta-labeled features (Semantic Model AI Optimization, AI-Generated Descriptions, Inspector proactive alerts) — new exams love testing brand-new features because that's what distinguishes current knowledge.
 - 105 min / 60 Q = 1:45 per question. Flag and move on; first instinct on scenario questions is usually right.
 - Wrong-answer patterns: anything requiring AMPscript/Apex/custom LLMs (MC Next) or external Tableau Server/Cloud concepts that don't apply to Tableau Next.

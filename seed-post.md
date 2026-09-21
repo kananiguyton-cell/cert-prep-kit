@@ -1,4 +1,4 @@
-# Seed Post for #cert-prep
+# Seed Post for #claudecode_certprepkit
 
 Copy/paste the sections below into Slack as separate messages (intro first, then your example posts). Adjust the HARD TOPIC and RESULT to whatever's real for you right now.
 
@@ -6,7 +6,7 @@ Copy/paste the sections below into Slack as separate messages (intro first, then
 
 ## Message 1: Channel Intro
 
-Welcome to **#cert-prep** — our shared pipeline for knocking out the **Tableau Next Consultant** and **Marketing Cloud Next Consultant** certs.
+Welcome to **#claudecode_certprepkit** — our shared pipeline for knocking out the **Tableau Next Consultant**, **Marketing Cloud Next Consultant**, and **Data 360 Consultant** certs.
 
 **How it works:**
 Post your exam results, hard topics, and useful resources here using the conventions in the pinned guide. That's it on your end.
