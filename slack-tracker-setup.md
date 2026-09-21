@@ -17,14 +17,18 @@ your Code → builds TEAM_STATS → cert-prep-dashboard.jsx (Cowork)
 
 ---
 
-## Part A — Create the private List
+## Part A — Create the private List — ✅ DONE (created via MCP 2026-09-21)
 
-Create a Slack List named **`Cert Prep — Team Progress`**. Keep it **private to you** (don't share
-it to the channel). Give it these columns, in this order:
+The List **`Cert Prep — Team Progress`** now exists:
+
+- **ID:** `F0C301AURRV`
+- **Link:** <https://salesforce.enterprise.slack.com/lists/T5J4Q04QG/F0C301AURRV>
+
+Columns as built (in order):
 
 | Column | Type | Options / notes |
 |---|---|---|
-| `Person` | person (user) | The submitter; the workflow fills this automatically. Primary column. |
+| `Person` | text (primary) | Submitter's name. Text, not a `user` column — Slack requires the primary column to be text. The workflow maps "Person who submitted" into it as text. |
 | `Exam` | select | `Tableau Next`, `MC Next`, `Data 360` |
 | `Status` | select | `Studying`, `Scheduled`, `Passed`, `Retaking` |
 | `Sections Complete` | number | Count of checklist sections the person has finished (0–6). |
@@ -32,14 +36,16 @@ it to the channel). Give it these columns, in this order:
 | `Last Result` | select | `Pass`, `Fail`, `—` |
 | `Hardest Sections` | text | Free text, e.g. "Consent, Flows". |
 | `Tip` | text | One-line tip for teammates. |
-| `Updated` | last_edited_time | Auto — no input needed. |
 
-**Keep the `Exam` option labels exactly** `Tableau Next` / `MC Next` / `Data 360` — they must match
-the `short` values in `cert-plans.json` so the dashboard can map rows to exams.
+**`Updated` column:** not created via MCP (`last_edited_time` isn't an MCP-creatable type). Slack
+tracks last-edited automatically; add it as a visible column from the List UI (**+ Add column →
+Last edited time**) if you want it on screen. The dashboard doesn't need it.
 
-> Want me to create this List for you via the Slack MCP? I can — then you just flip it to private
-> and confirm the columns. Or build it in the Slack UI yourself if you'd rather own its visibility
-> from the start.
+**Two things for you to confirm in the UI:**
+1. **Visibility** — a List created via MCP is owned by you; confirm it's **not shared** to
+   `#claudecode_certprepkit` or anyone else, so it stays facilitator-only.
+2. **`Exam` labels** — verify they read exactly `Tableau Next` / `MC Next` / `Data 360` (they must
+   match the `short` values in `cert-plans.json` so the dashboard can map rows to exams).
 
 ---
 
