@@ -10,11 +10,11 @@ Run this whenever you want an up-to-date view. It's a Claude Code task — just 
    `list_id` once you know it). Pull all rows (paginate if >100).
 
 2. **Dedup to current state.** The workflow appends a row per submission. Keep only the **latest
-   row per (Person, Exam)** — sort by `Updated` descending, take the first of each pair. This gives
+   row per (Submitter, Exam)** — sort by `Updated` descending, take the first of each pair. This gives
    each teammate's current status per exam.
 
 3. **Map each row to a `TEAM_STATS.members` entry:**
-   - `person` ← the `Person` column (display name).
+   - `person` ← the `Submitter` column (display name).
    - `exam` ← map the `Exam` label to its key: `Tableau Next → tableau`, `MC Next → mcnext`,
      `Data 360 → data360`. (These are the `short` values in `cert-plans.json`.)
    - `status` ← `Status` verbatim (`Studying` / `Scheduled` / `Passed` / `Retaking`).

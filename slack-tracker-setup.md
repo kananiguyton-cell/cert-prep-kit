@@ -28,7 +28,7 @@ Columns as built (in order):
 
 | Column | Type | Options / notes |
 |---|---|---|
-| `Person` | text (primary) | Submitter's name. Text, not a `user` column — Slack requires the primary column to be text. The workflow maps "Person who submitted" into it as text. |
+| `Submitter` | text (primary) | Submitter's name. Text, not a `user` column — Slack requires the primary column to be text. The workflow maps "Person who submitted" into it as text. |
 | `Exam` | select | `Tableau Next`, `MC Next`, `Data 360` |
 | `Status` | select | `Studying`, `Scheduled`, `Passed`, `Retaking` |
 | `Sections Complete` | number | Count of checklist sections the person has finished (0–6). |
@@ -64,7 +64,7 @@ In Slack: **Tools → Workflow Builder → New Workflow**.
    - *Hardest sections* — short text (optional)
    - *Tip for teammates* — short text (optional)
 3. **Step — "Add an item to a list"** → select the `Cert Prep — Team Progress` list. Map:
-   - `Person` ← **Person who submitted the form** (a built-in workflow variable)
+   - `Submitter` ← **Person who submitted the form** (a built-in workflow variable)
    - `Exam` ← form Exam · `Status` ← form Status · `Sections Complete` ← form number ·
      `Practice Avg %` ← form score · `Last Result` ← form result (`Not taken yet` → `—`) ·
      `Hardest Sections` ← form text · `Tip` ← form text
@@ -89,7 +89,7 @@ webhook the skill posts to.
 ## Notes on appends vs. updates
 
 The "Add an item to a list" step **appends a new row** each time someone reports — it does not
-update in place. That's fine: the dashboard build **keeps the latest row per (Person, Exam)** and
+update in place. That's fine: the dashboard build **keeps the latest row per (Submitter, Exam)** and
 ignores older ones, so history is preserved in the List while the dashboard shows current state.
 If Workflow Builder later offers an "update matching item" step, we can switch to it, but append +
 dedup-on-build is the reliable default.
