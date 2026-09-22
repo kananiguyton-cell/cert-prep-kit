@@ -17,6 +17,24 @@ your Code → builds TEAM_STATS → cert-prep-dashboard.jsx (Cowork)
 
 ---
 
+## Status at a glance (updated 2026-09-22)
+
+**✅ Done**
+- **Part A — List created** via MCP (`Cert Prep — Team Progress`, ID `F0C301AURRV`).
+- **Visibility confirmed** private to Kanani (not shared to the channel).
+- **`Exam` labels** created exactly `Tableau Next` / `MC Next` / `Data 360`.
+- **Primary column renamed** `Person` → `Submitter`; docs updated to match.
+
+**⏳ Remaining (Kanani, in Slack)**
+- **Part B** — build + publish the Workflow (form → "Add an item to a list") and run the crux test
+  (non-facilitator submission lands a row they can't open).
+- **Part C** — pin the workflow link in `#claudecode_certprepkit`; send the link to Claude to fill
+  `WORKFLOW_URL` in the skill.
+- **First refresh** — once a real row exists, Claude runs `slack_read_list` → rebuilds `TEAM_STATS`
+  (replaces the current stopgap data).
+
+---
+
 ## Part A — Create the private List — ✅ DONE (created via MCP 2026-09-21)
 
 The List **`Cert Prep — Team Progress`** now exists:
@@ -41,11 +59,11 @@ Columns as built (in order):
 tracks last-edited automatically; add it as a visible column from the List UI (**+ Add column →
 Last edited time**) if you want it on screen. The dashboard doesn't need it.
 
-**Two things for you to confirm in the UI:**
-1. **Visibility** — a List created via MCP is owned by you; confirm it's **not shared** to
-   `#claudecode_certprepkit` or anyone else, so it stays facilitator-only.
-2. **`Exam` labels** — verify they read exactly `Tableau Next` / `MC Next` / `Data 360` (they must
-   match the `short` values in `cert-plans.json` so the dashboard can map rows to exams).
+**UI confirmations — ✅ done:**
+1. **Visibility** — confirmed **not shared** to `#claudecode_certprepkit` or anyone; stays
+   facilitator-only.
+2. **`Exam` labels** — read exactly `Tableau Next` / `MC Next` / `Data 360`, matching the `short`
+   values in `cert-plans.json`.
 
 ---
 
@@ -98,7 +116,7 @@ dedup-on-build is the reliable default.
 
 ## Verification checklist
 
-- [ ] List created, private to you, columns and `Exam` labels exactly as above.
+- [x] List created, private to you, columns and `Exam` labels exactly as above.
 - [ ] Workflow published; link pinned in the channel.
 - [ ] Test submission from a non-facilitator account lands a row in the List.
 - [ ] That test account **cannot** open/browse the List.
