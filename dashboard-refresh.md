@@ -19,8 +19,9 @@ Run this whenever you want an up-to-date view. It's a Claude Code task — just 
      `Data 360 → data360`. (These are the `short` values in `cert-plans.json`.)
    - `status` ← `Status` verbatim (`Studying` / `Scheduled` / `Passed` / `Retaking`).
    - `sectionsComplete` ← `Sections Complete` (number, 0–6).
-   - `practiceAvg` ← `Practice Avg %` (number).
-   - `lastResult` ← `Last Result` (`Pass` / `Fail` / `—`).
+   - `practiceAvg` ← `Practice Avg %` (number, or omit if blank → dashboard renders "—").
+   - `lastResult` ← **derived from `Status`** (there is no `Last Result` column): `Passed` → `"Pass"`,
+     `Retaking` → `"Fail"`, `Studying`/`Scheduled` → `"—"`. The dashboard's pass-rate math reads this.
    - `hardest` ← parse the free-text `Hardest Sections` into **section ids** for that exam by
      fuzzy-matching against the section `name`s in `cert-plans.json`. E.g. for Data 360,
      "unification" or "harmonization" → `unify`; "activation" → `activate`. Drop anything that

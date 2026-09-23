@@ -51,9 +51,13 @@ Columns as built (in order):
 | `Status` | select | `Studying`, `Scheduled`, `Passed`, `Retaking` |
 | `Sections Complete` | number | Count of checklist sections the person has finished (0–6). |
 | `Practice Avg %` | number | Their latest practice-quiz score. |
-| `Last Result` | select | `Pass`, `Fail`, `—` |
 | `Hardest Sections` | text | Free text, e.g. "Consent, Flows". |
 | `Tip` | text | One-line tip for teammates. |
+
+> **No `Last Result` column** — it was redundant with `Status` (`Passed`=Pass, `Retaking`=Fail,
+> `Studying`/`Scheduled`=not taken). The dashboard derives the pass/fail badge and pass-rate from
+> `Status` at refresh time. If the live List still has a `Last Result` column, delete it (it's
+> ignored either way).
 
 **`Updated` column:** not created via MCP (`last_edited_time` isn't an MCP-creatable type). Slack
 tracks last-edited automatically; add it as a visible column from the List UI (**+ Add column →
@@ -86,10 +90,9 @@ In Slack: **Tools → Workflow Builder → New Workflow**.
    | Field | Type | Req? | Options | Hint (helper text) |
    |---|---|---|---|---|
    | *Exam* | select | ✅ | `Tableau Next`, `MC Next`, `Data 360` | Which certification this update is about. |
-   | *Status* | select | ✅ | `Studying`, `Scheduled`, `Passed`, `Retaking` | Where you are with this exam right now. |
+   | *Status* | select | ✅ | `Studying`, `Scheduled`, `Passed`, `Retaking` | Where you are right now: Studying, Scheduled (booked), Passed, or Retaking (didn't pass, going again). This is also how the dashboard tracks pass/fail — no separate result field. |
    | *Sections complete (0–6)* | number | ✅ | — | How many of the 6 exam sections you've finished studying. Check your 80/20 plan in the skill if unsure. Enter 0–6. |
    | *Practice score %* | number | — | — | Your most recent practice-quiz score as a percent (0–100). Leave blank if you haven't taken one yet. |
-   | *Last result* | select | ✅ | `Pass`, `Fail`, `Not taken yet` | Only if you've sat the real exam. Pick "Not taken yet" if you're still studying or just scheduled. |
    | *Hardest sections* | short text | — | — | The topic(s) giving you the most trouble, e.g. "Consent, Flows". |
    | *Tip for teammates* | short text | — | — | One thing that clicked or that you'd tell someone starting this exam. |
 
@@ -98,8 +101,7 @@ In Slack: **Tools → Workflow Builder → New Workflow**.
 3. **Step — "Add an item to a list"** → select the `Cert Prep — Team Progress` list. Map:
    - `Submitter` ← **Person who submitted the form** (a built-in workflow variable)
    - `Exam` ← form Exam · `Status` ← form Status · `Sections Complete` ← form number ·
-     `Practice Avg %` ← form score · `Last Result` ← form result (`Not taken yet` → `—`) ·
-     `Hardest Sections` ← form text · `Tip` ← form text
+     `Practice Avg %` ← form score · `Hardest Sections` ← form text · `Tip` ← form text
 4. **Publish.** Copy the workflow link.
 
 **Verify the crux:** confirm the workflow writes to the private List even though the submitter
