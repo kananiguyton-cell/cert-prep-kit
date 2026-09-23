@@ -71,16 +71,30 @@ Last edited time**) if you want it on screen. The dashboard doesn't need it.
 
 In Slack: **Tools → Workflow Builder → New Workflow**.
 
+**Workflow name:** `Log Cert Prep Progress`
+
 1. **Trigger:** "From a link" (or a button/bookmark you pin in `#claudecode_certprepkit`). A link
    trigger lets anyone in the channel start it on demand.
-2. **Step — "Collect info in a form"** with these fields (map each to a List column in step 3):
-   - *Exam* — select: `Tableau Next`, `MC Next`, `Data 360`
-   - *Status* — select: `Studying`, `Scheduled`, `Passed`, `Retaking`
-   - *Sections complete (0–6)* — number
-   - *Practice score %* — number
-   - *Last result* — select: `Pass`, `Fail`, `Not taken yet`
-   - *Hardest sections* — short text (optional)
-   - *Tip for teammates* — short text (optional)
+2. **Step — "Collect info in a form"**. Set the form up as:
+   - **Form title:** `📊 Log your cert prep`
+   - **Form description:** `Takes ~30 seconds. Log a study session, a practice round, or an exam
+     result. Your facilitator sees the team view — you don't need to do anything else.`
+
+   Fields (map each to a List column in step 3). "Req?" = required in Builder; the rest are optional
+   so people can log a quick update without every field:
+
+   | Field | Type | Req? | Options | Hint (helper text) |
+   |---|---|---|---|---|
+   | *Exam* | select | ✅ | `Tableau Next`, `MC Next`, `Data 360` | Which certification this update is about. |
+   | *Status* | select | ✅ | `Studying`, `Scheduled`, `Passed`, `Retaking` | Where you are with this exam right now. |
+   | *Sections complete (0–6)* | number | ✅ | — | How many of the 6 exam sections you've finished studying. Check your 80/20 plan in the skill if unsure. Enter 0–6. |
+   | *Practice score %* | number | — | — | Your most recent practice-quiz score as a percent (0–100). Leave blank if you haven't taken one yet. |
+   | *Last result* | select | ✅ | `Pass`, `Fail`, `Not taken yet` | Only if you've sat the real exam. Pick "Not taken yet" if you're still studying or just scheduled. |
+   | *Hardest sections* | short text | — | — | The topic(s) giving you the most trouble, e.g. "Consent, Flows". |
+   | *Tip for teammates* | short text | — | — | One thing that clicked or that you'd tell someone starting this exam. |
+
+   > The dashboard handles a blank *Practice score* — it renders "—" rather than a fake 0%, so an
+   > empty field flows through cleanly.
 3. **Step — "Add an item to a list"** → select the `Cert Prep — Team Progress` list. Map:
    - `Submitter` ← **Person who submitted the form** (a built-in workflow variable)
    - `Exam` ← form Exam · `Status` ← form Status · `Sections Complete` ← form number ·
