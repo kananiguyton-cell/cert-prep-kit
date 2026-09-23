@@ -53,15 +53,15 @@ Columns as built (in order):
 | `Practice Avg %` | number | Their latest practice-quiz score. |
 | `Hardest Sections` | text | Free text, e.g. "Consent, Flows". |
 | `Tip` | text | One-line tip for teammates. |
+| `Updated` | last_edited_time | Auto — Slack sets it; the refresh sorts by it for latest-per-person. |
 
 > **No `Last Result` column** — it was redundant with `Status` (`Passed`=Pass, `Retaking`=Fail,
 > `Studying`/`Scheduled`=not taken). The dashboard derives the pass/fail badge and pass-rate from
 > `Status` at refresh time. If the live List still has a `Last Result` column, delete it (it's
 > ignored either way).
 
-**`Updated` column:** not created via MCP (`last_edited_time` isn't an MCP-creatable type). Slack
-tracks last-edited automatically; add it as a visible column from the List UI (**+ Add column →
-Last edited time**) if you want it on screen. The dashboard doesn't need it.
+**`Updated` column:** added (type `last_edited_time`) — auto-populated by Slack, no input needed.
+The refresh sorts by it to keep the latest row per (Submitter, Exam).
 
 **UI confirmations — ✅ done:**
 1. **Visibility** — confirmed **not shared** to `#claudecode_certprepkit` or anyone; stays
