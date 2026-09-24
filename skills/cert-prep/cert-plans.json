@@ -2,6 +2,8 @@
   "meta": {
     "version": "2.0",
     "updated": "2026-09-18",
+    "author": "Kanani Guyton",
+    "maintainer": "Kanani Guyton — Success Architect, Salesforce Cloud Success",
     "builtFor": "Salesforce Success Architects and the broader team",
     "strategy": "80/20 by real exam section weights. This file is the objective exam structure (sections, weights, official topics, pass marks, trails, suggested sequences). Per-user personalization — which sections are a candidate's strength vs. gap — is decided interactively by the cert-prep skill, not baked here. Add a new exam by adding one entry under \"exams\"; the skill and the facilitator dashboard both read this file.",
     "gapLegend": {

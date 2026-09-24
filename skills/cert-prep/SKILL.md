@@ -11,9 +11,16 @@ description: >
   "quiz me on", "Tableau Next exam", "Marketing Cloud Next exam", "MC Next exam",
   "Data 360 exam", "certification study", "80/20 plan", "am I ready for the exam",
   "what's new for the exam", "explain this exam topic".
+author: Kanani Guyton
+metadata:
+  maintainer: Kanani Guyton
+  role: Success Architect
+  created: 2026-09
 ---
 
 # Cert Prep — Product-Aware Study Coach
+
+_Author: Kanani Guyton · Success Architect, Salesforce Cloud Success_
 
 A study coach for Salesforce consultant certifications, built for the whole team and run inside
 Claude Code (full model quality — real reasoning, real web search, multi-turn tutoring). It reads
