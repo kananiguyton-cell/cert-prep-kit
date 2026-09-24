@@ -83,10 +83,10 @@ const EXAM_KEYS = Object.keys(PLANS);
    the first real refresh. `hardest` holds section ids.
    ============================================================ */
 const TEAM_STATS = {
-  generatedAt: "2026-09-21 (from channel posts — one-off, pre-workflow)",
+  generatedAt: "2026-09-23 (live from Slack List F0C301AURRV)",
   sample: false,
   members: [
-    { person: "Kanani G.", exam: "mcnext", status: "Passed", sectionsComplete: 6, practiceAvg: null, lastResult: "Pass", hardest: ["consent"], tip: "Consent is managed at the Contact Point level (email/phone), not the Individual/customer level — different from traditional marketing platforms." },
+    { person: "Kanani G.", exam: "mcnext", status: "Passed", sectionsComplete: 6, practiceAvg: null, lastResult: "Pass", hardest: ["consent"], tip: "In Marketing Cloud Next, consent is managed at the Contact Point level (e.g. an email address or phone number), not at the Individual or customer ID level — different from traditional marketing platforms." },
   ],
 };
 
