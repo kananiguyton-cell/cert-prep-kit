@@ -42,10 +42,10 @@ const PLANS = {
     sections: [
       { id: "sem", name: "Data Setup", weight: 20, gap: "Core" },
       { id: "agent", name: "Agentic Experiences", weight: 25, gap: "Core" },
-      { id: "embed", name: "Embedding & Interop", weight: 20, gap: "Core" },
+      { id: "embed", name: "Embedding, Cross-Cloud & Interoperability", weight: 20, gap: "Core" },
       { id: "viz", name: "Visualizations & Dashboards", weight: 15, gap: "Medium" },
       { id: "admin", name: "Setup, Admin & Security", weight: 10, gap: "Medium" },
-      { id: "ws", name: "Workspaces & Deployment", weight: 10, gap: "Medium" },
+      { id: "ws", name: "Workspaces, Orgs & Deployment", weight: 10, gap: "Medium" },
     ],
   },
   mcnext: {
@@ -53,12 +53,12 @@ const PLANS = {
     short: "MC Next",
     passPct: 72,
     sections: [
-      { id: "flow", name: "Campaigns, Flows & Content", weight: 30, gap: "Core" },
-      { id: "data", name: "Data Modeling & Segmentation", weight: 25, gap: "Verify" },
+      { id: "flow", name: "Campaign Design, Flow Orchestration & Content", weight: 30, gap: "Core" },
+      { id: "data", name: "Data Modeling, Identity Resolution & Segmentation", weight: 25, gap: "Verify" },
       { id: "setup", name: "Platform Setup & Governance", weight: 13, gap: "Medium" },
       { id: "consent", name: "Consent", weight: 13, gap: "Core" },
-      { id: "ai", name: "Agentforce & AI", weight: 11, gap: "Verify" },
-      { id: "rpt", name: "Analytics & Insights", weight: 8, gap: "Verify" },
+      { id: "ai", name: "Agentforce & AI Innovation", weight: 11, gap: "Verify" },
+      { id: "rpt", name: "Analytics & Performance Insights", weight: 8, gap: "Verify" },
     ],
   },
   data360: {
@@ -67,11 +67,11 @@ const PLANS = {
     passPct: 70,
     sections: [
       { id: "pos", name: "Solution Positioning", weight: 14, gap: "Medium" },
-      { id: "admin", name: "Setup & Administration", weight: 13, gap: "Verify" },
-      { id: "ingest", name: "Connection & Ingestion", weight: 18, gap: "Core" },
-      { id: "unify", name: "Harmonization & Unification", weight: 17, gap: "Core" },
-      { id: "insights", name: "Enhancements, Sharing & Analysis", weight: 18, gap: "Medium" },
-      { id: "activate", name: "Activations & Utilization", weight: 20, gap: "Core" },
+      { id: "admin", name: "Setup and Administration", weight: 13, gap: "Verify" },
+      { id: "ingest", name: "Data Source Connection and Ingestion", weight: 18, gap: "Core" },
+      { id: "unify", name: "Harmonization and Unification", weight: 17, gap: "Core" },
+      { id: "insights", name: "Data Enhancements, Sharing, and Analysis", weight: 18, gap: "Medium" },
+      { id: "activate", name: "Data Activations and Utilization", weight: 20, gap: "Core" },
     ],
   },
 };
@@ -83,10 +83,13 @@ const EXAM_KEYS = Object.keys(PLANS);
    the first real refresh. `hardest` holds section ids.
    ============================================================ */
 const TEAM_STATS = {
-  generatedAt: "2026-09-23 (live from Slack List F0C301AURRV)",
+  generatedAt: "2026-11-04 (live from Slack List F0C301AURRV)",
   sample: false,
   members: [
     { person: "Kanani G.", exam: "mcnext", status: "Passed", sectionsComplete: 6, practiceAvg: null, lastResult: "Pass", hardest: ["consent"], tip: "In Marketing Cloud Next, consent is managed at the Contact Point level (e.g. an email address or phone number), not at the Individual or customer ID level — different from traditional marketing platforms." },
+    { person: "Kanani G.", exam: "tableau", status: "Passed", sectionsComplete: 6, practiceAvg: null, lastResult: "Pass", hardest: ["embed"], tip: "Know what PDS is and how it's used, know the basics of how MCP works, brush up on permission sets vs licenses, and RLS with and without PDS alignment." },
+    { person: "Marlom V.", exam: "mcnext", status: "Passed", sectionsComplete: 6, practiceAvg: null, lastResult: "Pass", hardest: ["consent"], tip: "Read the terminology used in the articles and apply your comprehension skills critically to weed out bad answers. Questions include 3-answer multiple choice; easier than other SF exams." },
+    { person: "Erika B.", exam: "data360", status: "Studying", sectionsComplete: 0, practiceAvg: null, lastResult: "—", hardest: [] },
   ],
 };
 

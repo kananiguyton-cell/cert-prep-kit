@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "2.0",
-    "updated": "2026-09-18",
+    "version": "2.1",
+    "updated": "2026-09-29",
     "author": "Kanani Guyton",
     "maintainer": "Kanani Guyton — Success Architect, Salesforce Cloud Success",
     "builtFor": "Salesforce Success Architects and the broader team",
@@ -56,7 +56,7 @@
           "name": "Embedding, Cross-Cloud & Interoperability",
           "weight": 20,
           "gap": "Core",
-          "note": "Likely least-familiar territory as the exam scopes it.",
+          "note": "Likely least-familiar territory as the exam scopes it. Score reports label this section 'Catalog Management' — same 20% section, different name.",
           "items": [
             "Embed dashboards in Lightning pages and Slack",
             "Slack integration: rich previews + MCP server (ask Slackbot about data)",
@@ -84,7 +84,7 @@
           "items": [
             "Guided setup; activating features incl. Agentic Analytics for users",
             "Permission sets & licenses — which enables what",
-            "Row-Level Security (RLS) and object-level governance"
+            "Row-Level Security (RLS) and object-level governance — including RLS with vs. without a Published Data Source (PDS): via a PDS, record-level security is inherited from the PDS; otherwise access runs through Data 360 governance policies"
           ]
         },
         {
@@ -108,7 +108,17 @@
         "Session 4 (1.5 hrs): Setup/permissions/RLS + workspaces/Personal Org/data kit deployment",
         "Session 5 (1 hr): Visualization actions + full exam-guide re-read; self-quiz each outline bullet ('could I answer a scenario on this?')",
         "Hands-on multiplier: spin up Tableau Next in a demo org and build one semantic model → viz → dashboard → ask the Agent. One hour of this replaces three of reading."
-      ]
+      ],
+      "fieldIntel": {
+        "source": "Real passer — Kanani Guyton (tracker F0C301AURRV, Rec0C4BHQ9J84), passed 2026-09-24. Per-section scores below from passer Henry's 2026-09-18 score report. Score-report 'hardest' label 'Catalog Management' = guide section 'Embedding, Cross-Cloud & Interoperability' (embed).",
+        "passerSectionScores": {"sem": 75, "agent": 80, "embed": 58, "admin": 83, "viz": 67, "ws": 50},
+        "hammered": [
+          "PDS (Tableau Published Data Source) — a direct connection, NOT represented as a DLO in Data 360; data access is not configured through Data 360 governance, and record-level security is inherited from the PDS [validated: analytics/264-0-0/tua_governance.html 'Tableau Published Data Source (PDS)', rel 3]",
+          "RLS with vs. without PDS alignment — Tableau Next access is multi-layered (Salesforce permission sets + Data 360 governance policies + per-asset sharing); when data arrives via a PDS, RLS is inherited from the PDS instead [validated: analytics/264-0-0/tua_governance.html 'Data Governance and Sharing in Tableau Next', rel 4]",
+          "MCP basics — Tableau Next Slack integration + MCP server (ask Slackbot about data); embed section",
+          "Permission sets vs. licenses — know which enables what (admin section)"
+        ]
+      }
     },
     "mcnext": {
       "name": "Marketing Cloud Next Consultant",
@@ -164,7 +174,7 @@
           "name": "Consent",
           "weight": 13,
           "gap": "Core",
-          "note": "Entirely new subsystem for most candidates; heavily scenario-tested.",
+          "note": "Entirely new subsystem for most candidates; heavily scenario-tested. Key trap: consent is tied to the Contact Point (email/phone), not the Unified Individual record.",
           "items": [
             "Platform consent object model and relationships",
             "Creating/updating consent records: forms, flows, API — when each fits",
@@ -204,7 +214,17 @@
         "Session 6 (1.5 hrs): Marketing Agents + conversational messaging + predictive AI features; dashboards; Digital Wallet marketing scenarios",
         "Session 7 (1 hr): Exam-guide outline self-quiz — every bullet phrased as 'given a scenario…'; drill anything shaky",
         "Hands-on multiplier: build one segment-triggered flow with a personalized email in a demo org, and click through Consent objects in Setup once. The object relationships stick 10x faster seen live."
-      ]
+      ],
+      "fieldIntel": {
+        "source": "Real passers — Kanani Guyton (tracker F0C301AURRV, Rec0C3SLL7FPC), passed Sep 2026; independently passed by a teammate (Rec0C5EK2FPHN). Hardest section flagged by both: Consent.",
+        "passerSectionScores": {},
+        "hammered": [
+          "Consent is tied to the Contact Point value (email address or phone number), NOT to the Unified Individual / customer-ID record itself — a Unified Individual can hold multiple contact points, and only opted-in contact points receive a message. Differs from traditional marketing platforms [validated: mktg/264-0-0/mktg_consent_tools_ref.html 'Contact Point' + 'Unified Individual', rel 2]",
+          "Consent is powered by Data 360; four objects store consent data: Communication Subscription, Engagement Channel Type, Communication Subscription Channel Type, Communication Subscription Consent [validated: mktg/264-0-0/mktg_consent_tools_ref.html 'Consent Objects', rel 2]",
+          "Consent checks are required for promotional email and any SMS/WhatsApp/RCS message; transactional-email consent checks are off by default [validated: mktg/264-0-0/mktg_consent_tools_ref.html 'Consent Check', rel 2]",
+          "Exam technique from passers: 3-option multiple choice, generally easier than other SF exams — read article terminology closely and eliminate weak answers"
+        ]
+      }
     },
     "data360": {
       "name": "Data 360 Consultant",

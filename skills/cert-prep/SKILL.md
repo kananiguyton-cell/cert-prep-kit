@@ -10,7 +10,9 @@ description: >
   Triggers on: "cert prep", "help me study for", "study plan for", "practice questions for",
   "quiz me on", "Tableau Next exam", "Marketing Cloud Next exam", "MC Next exam",
   "Data 360 exam", "certification study", "80/20 plan", "am I ready for the exam",
-  "what's new for the exam", "explain this exam topic".
+  "what's new for the exam", "explain this exam topic", "ingest cert prep submissions",
+  "refresh cert-plans from the tracker", "new cert prep progress logged",
+  "update cert-plans from the team progress list".
 author: Kanani Guyton
 metadata:
   maintainer: Kanani Guyton
@@ -42,7 +44,9 @@ Pick an exam → Deliver 80/20 plan → Personalize gaps interactively
     ↓
 Practice quizzes (scenario-based) · Live research (WebSearch) · Socratic tutoring
     ↓
-"Report your progress" → team Slack workflow → facilitator's private tracker
+"Report your progress" → team Slack workflow → facilitator's private tracker (List F0C301AURRV)
+    ↓
+Facilitator ingest: read tracker → validate vs. official docs → fold into cert-plans.json
 ```
 
 ---
@@ -130,15 +134,56 @@ this skill directly (that keeps the stats tracker facilitator-only — the workf
 so no teammate needs access to the underlying list).
 
 When a user finishes a study session, a practice round, or sits the exam, prompt them to log it:
-> "Log this in the **Cert Prep progress** workflow pinned in #claudecode_certprepkit — pick the
-> exam, your status, sections done, practice %, and any tip. It feeds the team tracker."
+> "Log this in the **Cert Prep progress** workflow (WORKFLOW_URL below; also pinned in
+> #claudecode_certprepkit) — pick the exam, your status, sections done, practice %, and any tip.
+> It feeds the team tracker."
 
-Configuration — fill in once the workflow exists:
-- **WORKFLOW_URL:** _(paste the Slack workflow link here once Kanani builds it; until then, refer
-  users to the pinned workflow in #claudecode_certprepkit by name.)_
+Configuration:
+- **WORKFLOW_URL:** https://slack.com/shortcuts/Ft0C3GV0PW69/0f0922e523a81180accc90189e9ab3e4
+  (the **Cert Prep progress** workflow; also pinned in #claudecode_certprepkit). Share this link
+  when nudging a teammate to log progress.
 
 Do not post to Slack on the user's behalf, and never post to any channel without explicit
 confirmation.
+
+---
+
+## Mode: Ingest new tracker submissions (facilitator only)
+
+**Trigger prompt (canonical):** _"Ingest new cert prep submissions from the team progress tracker."_
+Also fires on: "refresh cert-plans from the tracker", "new cert prep progress logged",
+"update cert-plans from the team progress list".
+
+This is the facilitator's mode — it turns teammates' logged submissions into validated updates to
+`cert-plans.json`. It is the *read/ingest* counterpart to "Report your progress" (the teammate
+*write* path).
+
+- **Source list:** Slack List **"Cert Prep — Team Progress"**, `list_id` **F0C301AURRV**. Read it
+  with `slack_read_list`. Columns: Submitter · Exam · Status · Sections Complete · Practice Avg % ·
+  Hardest Sections · Tip · Updated.
+- **Find what's new:** compare against what's already recorded in each exam's `fieldIntel` block
+  (and the `Updated` timestamps). Only process rows not yet folded in.
+- **For each new row**, extract the exam, status, hardest sections, per-section scores (if a score
+  report is provided), and tips.
+- **Validate before writing — no exceptions.** Confirm every factual claim (terms, definitions,
+  permissions, behavior) against **official Salesforce documentation** via the `salesforce-docs`
+  MCP (`salesforce_docs_search` / `salesforce_docs_fetch`). Never assume or guess. Cite the source
+  inline as `[validated: <article/source>, rel <n>]`. If a claim can only be settled by the exam
+  guide, the guide must be **pasted as text** (CSG) — `help.salesforce.com` articleView pages do
+  not render via `WebFetch` (JS shell), so don't rely on fetching them.
+- **Reconcile section labels against the official exam guide.** Score-report section names can
+  differ from the exam-guide objective names (real example: Tableau Next score reports show
+  "Catalog Management" for the guide's "Embedding, Cross-Cloud, & Interoperability" section — same
+  20% section, different label). Map intel to the guide's section; never invent a section. **The
+  pasted official exam guide outranks any score-report label** — reconcile against it first.
+- **Fold intel into the right place:** enrich the matching section's `items`/`note` and the exam's
+  optional `fieldIntel` block (with `source`, `passerSectionScores`, and a `hammered` list).
+  Attribute with passer + date. Record per-section scores as a difficulty signal (bump `gap` to
+  Core where a section scores low or is repeatedly flagged).
+- **Preserve structure:** keep section `id`s stable, weights summing to 100, and never hardcode
+  facts in this SKILL.md — everything lives in `cert-plans.json`.
+- **Finish** by summarizing what was ingested and flagging anything that still needs a pasted exam
+  guide. Do not post to Slack; this mode only reads the list and edits the data file.
 
 ---
 
@@ -148,3 +193,8 @@ Add one entry under `exams` in `cert-plans.json` (`name`, `short`, `passPct`, `p
 `trail`, `sections[{id,name,weight,gap,note,items}]`, `skips`, `sequence`). Keep section `weight`s
 summing to 100 and section `id`s stable — the facilitator dashboard and the Slack tracker key off
 the same ids. No changes to this SKILL.md are needed.
+
+An exam may also carry an optional **`fieldIntel`** block (`source`, `passerSectionScores`,
+`hammered[]`) — validated, real-passer exam intelligence accumulated by the ingest mode. Section
+`name`s must match the **official exam guide** exactly; if the score report uses a different label,
+record that alias in the section `note` and in `fieldIntel.source` rather than renaming the section.
