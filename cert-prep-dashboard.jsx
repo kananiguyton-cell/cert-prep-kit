@@ -74,6 +74,19 @@ const PLANS = {
       { id: "activate", name: "Data Activations and Utilization", weight: 20, gap: "Core" },
     ],
   },
+  agentforce: {
+    name: "Agentforce Specialist",
+    short: "Agentforce",
+    passPct: 72,
+    sections: [
+      { id: "prompt", name: "Prompt Engineering", weight: 20, gap: "Core" },
+      { id: "d360", name: "Data 360 Fundamentals", weight: 20, gap: "Medium" },
+      { id: "agents", name: "AI Agents", weight: 35, gap: "Core" },
+      { id: "test", name: "Testing, Deployment, and Maintenance", weight: 10, gap: "Medium" },
+      { id: "gov", name: "Governance and Observability", weight: 10, gap: "Medium" },
+      { id: "multi", name: "Multi-Agent Orchestration", weight: 5, gap: "Medium" },
+    ],
+  },
 };
 const EXAM_KEYS = Object.keys(PLANS);
 

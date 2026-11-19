@@ -4,6 +4,7 @@ A certification prep system for the team, covering:
 - **Salesforce Certified Tableau Next Consultant**
 - **Salesforce Certified Marketing Cloud Next Consultant**
 - **Salesforce Certified Data 360 Consultant**
+- **Salesforce Certified Agentforce Specialist**
 
 Built on an 80/20 principle: study plans weighted by real exam section weights. **v2 splits the
 kit for the team's environment (Claude Code + Cowork, not claude.ai):** end users study through a

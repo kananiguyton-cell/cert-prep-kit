@@ -5,14 +5,14 @@ description: >
   weighted by real exam section weights, generates scenario-based practice questions, runs live
   web research for the newest enablement, and tutors weak topics Socratically — at full model
   quality inside Claude Code. Currently covers Tableau Next Consultant, Marketing Cloud Next
-  Consultant, and Data 360 Consultant; extend by editing cert-plans.json. Points users to the
+  Consultant, Data 360 Consultant, and Agentforce Specialist; extend by editing cert-plans.json. Points users to the
   team Slack workflow to log progress into the facilitator's private tracker.
   Triggers on: "cert prep", "help me study for", "study plan for", "practice questions for",
   "quiz me on", "Tableau Next exam", "Marketing Cloud Next exam", "MC Next exam",
-  "Data 360 exam", "certification study", "80/20 plan", "am I ready for the exam",
+  "Data 360 exam", "Agentforce Specialist exam", "Agentforce exam", "certification study", "80/20 plan", "am I ready for the exam",
   "what's new for the exam", "explain this exam topic", "ingest cert prep submissions",
   "refresh cert-plans from the tracker", "new cert prep progress logged",
-  "update cert-plans from the team progress list".
+  "update cert-plans from the team progress list", "publish the cert prep skill update".
 author: Kanani Guyton
 metadata:
   maintainer: Kanani Guyton
@@ -24,14 +24,14 @@ metadata:
 
 _Author: Kanani Guyton · Success Architect, Salesforce Cloud Success_
 
-A study coach for Salesforce consultant certifications, built for the whole team and run inside
+A study coach for Salesforce certifications, built for the whole team and run inside
 Claude Code (full model quality — real reasoning, real web search, multi-turn tutoring). It reads
 one data file, `cert-plans.json`, which holds the objective structure of every supported exam
 (sections, weights, official topics, pass marks, trails, suggested sequences). Everything below
 iterates that file, so adding a cert is a data-only edit.
 
 **Supported exams (from `cert-plans.json`):** Tableau Next Consultant · Marketing Cloud Next
-Consultant · Data 360 Consultant.
+Consultant · Data 360 Consultant · Agentforce Specialist.
 
 ---
 
@@ -53,6 +53,13 @@ Facilitator ingest: read tracker → validate vs. official docs → fold into ce
 
 ## Startup
 
+0. **Check the docs connector.** This skill grounds its teaching in official Salesforce docs through
+   the `salesforce-docs` MCP connector (`salesforce_docs_search` / `salesforce_docs_fetch`). If those
+   tools are not available, tell the user plainly and give them this one-time fix, then ask them to
+   restart Claude Code:
+   `claude mcp add --transport http --scope user salesforce-docs https://salesforce-docs-76258744c9d7.herokuapp.com/api/mcp`
+   If they decline, continue with `WebSearch` only and label every explanation
+   "not doc-grounded — verify before relying on it."
 1. Read `cert-plans.json` from this skill's directory. It is the single source of truth — never
    hardcode exam facts; always read them from the file.
 2. If the user named an exam, select it. Otherwise list the supported exams (name + `passNote`)
@@ -62,6 +69,16 @@ Facilitator ingest: read tracker → validate vs. official docs → fold into ce
    a newcomer studies it. Do not assume the user's background from their role. The `gap` field in
    the file (Core / Medium / Verify — see `meta.gapLegend`) is the *default* difficulty, not a fact
    about this user.
+
+---
+
+## Grounding rule (quiz, tutoring, plan)
+
+Before writing a quiz question or tutoring a topic, fetch the matching section's `sources` (URLs in
+`cert-plans.json`) with `salesforce_docs_fetch` — or `salesforce_docs_search` if a section has no
+`sources` yet — and write from what the docs say. Cite the article title in the explanation. If a
+fetch fails or the topic is listed in the exam's `groundingGaps`, say so instead of answering from
+memory. Note that docs may say "subagents" where an exam guide says "topics".
 
 ---
 
@@ -184,6 +201,34 @@ This is the facilitator's mode — it turns teammates' logged submissions into v
   facts in this SKILL.md — everything lives in `cert-plans.json`.
 - **Finish** by summarizing what was ingested and flagging anything that still needs a pasted exam
   guide. Do not post to Slack; this mode only reads the list and edits the data file.
+
+---
+
+## Mode: Publish an update (facilitator only)
+
+**Trigger prompt (canonical):** _"Publish the cert prep skill update."_ Also fires on: "push the
+cert prep update", "resync the cert prep repos".
+
+Run this after any edit to `SKILL.md` or `cert-plans.json`, so teammates who clone get the latest.
+
+- **Source of truth:** the active copy at `~/.claude/skills/cert-prep/`. Edit there first; never edit
+  a repo copy directly.
+- **Validate:** `cert-plans.json` parses as JSON, every exam's section weights sum to 100, and section
+  `id`s are unchanged for existing exams.
+- **Sync both repos** (under `~/claude-projects/`):
+  - `cert-prep-skill` (team-facing — what the channel canvas tells people to clone): copy both files
+    into `skills/cert-prep/`.
+  - `cert-prep-kit` (facilitator): copy both files into `skills/cert-prep/` and `cert-plans.json` to
+    the repo root. If exam sections changed, mirror names/weights/gaps into `PLANS` in
+    `cert-prep-dashboard.jsx`.
+- **Commit and push** each repo to both remotes (GitHub `origin` + git.soma `soma`). Confirm with
+  Kanani before pushing.
+- **Verify:** fresh-clone `cert-prep-skill` to a temp dir and `diff -r` its `skills/cert-prep/`
+  against the active copy — must be identical.
+- **Bump the canvas date:** on channel canvas **F0C4M31V1G8**, `slack_read_canvas` for fresh section
+  ids, then `slack_update_canvas` with a targeted `replace` of only the **Last Updated** section
+  (`**Last Updated:** ![](slack_date:YYYY-MM-DD) — <one-line summary of what changed>`). Never do a
+  full-canvas replace. Confirm with Kanani before editing.
 
 ---
 

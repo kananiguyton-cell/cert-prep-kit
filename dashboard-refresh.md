@@ -18,7 +18,7 @@ Run this whenever you want an up-to-date view. It's a Claude Code task — just 
      **user ID** (e.g. `U06AQJ2T90U`), not a name. Resolve it with `slack_read_user_profile` and use
      a short display name (e.g. "Kanani G.").
    - `exam` ← map the `Exam` label to its key: `Tableau Next → tableau`, `MC Next → mcnext`,
-     `Data 360 → data360`. (These are the `short` values in `cert-plans.json`.)
+     `Data 360 → data360`, `Agentforce → agentforce`. (These are the `short` values in `cert-plans.json`.)
    - `status` ← `Status` verbatim (`Studying` / `Scheduled` / `Passed` / `Retaking`).
    - `sectionsComplete` ← `Sections Complete` (number, 0–6).
    - `practiceAvg` ← `Practice Avg %` (number, or omit if blank → dashboard renders "—").

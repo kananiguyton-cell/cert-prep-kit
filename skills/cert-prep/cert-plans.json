@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "2.1",
-    "updated": "2026-09-29",
+    "version": "2.3",
+    "updated": "2026-11-19",
     "author": "Kanani Guyton",
     "maintainer": "Kanani Guyton — Success Architect, Salesforce Cloud Success",
     "builtFor": "Salesforce Success Architects and the broader team",
@@ -34,6 +34,32 @@
             "AI-Generated Descriptions (Beta)",
             "Marketplace semantic model templates",
             "Complete the Tableau Semantics badge (45 min)"
+          ],
+          "sources": [
+            {
+              "title": "Create Semantic Models and Define Metrics",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_data_sdm.htm&type=5"
+            },
+            {
+              "title": "Create a Semantic Model in Tableau Next",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_data_sdm_create.htm&type=5"
+            },
+            {
+              "title": "Add a Metric to a Semantic Model",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_data_sdm_add_metrics.htm&type=5"
+            },
+            {
+              "title": "Calculated Fields in Tableau Next",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_data_sdm_semantic_definitions.htm&type=5"
+            },
+            {
+              "title": "Accelerate Semantic Model Creation with Marketplace Templates",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_data_sdm_use_marketplace.htm&type=5"
+            },
+            {
+              "title": "Tableau Next Marketplace",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_marketplace.htm&type=5"
+            }
           ]
         },
         {
@@ -49,6 +75,40 @@
             "Inspector proactive data alerts (Beta) — threshold notifications",
             "Draft with Einstein / natural-language data prep",
             "Read: Plan Your Tableau Agent Implementation"
+          ],
+          "sources": [
+            {
+              "title": "Tableau Agent in Tableau Next",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_ai.htm&type=5"
+            },
+            {
+              "title": "Build an AI-Ready Semantic Model",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_ai_build_guide.htm&type=5"
+            },
+            {
+              "title": "Design Semantic Models for AI Readiness",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_ai_sm_design.htm&type=5"
+            },
+            {
+              "title": "Optimize and Prepare Semantic Models for AI in Tableau Next",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_data_sdm_validate.htm&type=5"
+            },
+            {
+              "title": "Set Up Tableau Agent in Tableau Next",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_admin_enable_agentforce_templates.htm&type=5"
+            },
+            {
+              "title": "Business Preferences for Analytics Agent",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.c360_a_sl_biz_preferences.htm&type=5"
+            },
+            {
+              "title": "Receive Proactive Data Alerts in Tableau Next",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_metric_data_alert_types.htm&type=5"
+            },
+            {
+              "title": "Tableau Agent: Data Alerting Is Generally Available (release note)",
+              "url": "https://help.salesforce.com/s/articleView?id=release-notes.rn_tua_metric_data_alerts_ga.htm&type=5"
+            }
           ]
         },
         {
@@ -63,6 +123,24 @@
             "Tableau Next Apps for Salesforce + Marketplace offerings",
             "APIs/SDKs and App Template Framework — know what each is for",
             "Positioning vs. other Salesforce analytics (CRM Analytics)"
+          ],
+          "sources": [
+            {
+              "title": "Add a Tableau Next Dashboard to a Lightning Page",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_embed_dashboard.htm&type=5"
+            },
+            {
+              "title": "Tableau Next (overview)",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua.htm&type=5"
+            },
+            {
+              "title": "New Features for Tableau Next Development (Embedding SDK v2.0, App Template Framework)",
+              "url": "https://help.salesforce.com/s/articleView?id=release-notes.rn_tua_development.htm&type=5"
+            },
+            {
+              "title": "App Template Framework Developer Guide",
+              "url": "https://developer.salesforce.com/docs/analytics/app-template-framework/guide/atf-feature-overview.html"
+            }
           ]
         },
         {
@@ -74,6 +152,24 @@
           "items": [
             "Dashboard design best practices",
             "Actions: navigation links, object actions, single-click actions firing Flows/URLs"
+          ],
+          "sources": [
+            {
+              "title": "Add Single-Click Actions to Your Data",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_create_dashboard_add_action.htm&type=5"
+            },
+            {
+              "title": "Add a Salesforce Flow Action to a Dashboard",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_create_dashboard_flow_action.htm&type=5"
+            },
+            {
+              "title": "Add a Navigation Action to a Visualization",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_viz_navigate_action.htm&type=5"
+            },
+            {
+              "title": "Take Action from Your Tableau Next Visualization",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_viz_take_action.htm&type=5"
+            }
           ]
         },
         {
@@ -85,6 +181,20 @@
             "Guided setup; activating features incl. Agentic Analytics for users",
             "Permission sets & licenses — which enables what",
             "Row-Level Security (RLS) and object-level governance — including RLS with vs. without a Published Data Source (PDS): via a PDS, record-level security is inherited from the PDS; otherwise access runs through Data 360 governance policies"
+          ],
+          "sources": [
+            {
+              "title": "Tableau Next Permission Sets and Licenses",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_admin_permsets_licenses.htm&type=5"
+            },
+            {
+              "title": "Data Governance and Sharing in Tableau Next",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_governance.htm&type=5"
+            },
+            {
+              "title": "Set Up Tableau Agent in Tableau Next",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_admin_enable_agentforce_templates.htm&type=5"
+            }
           ]
         },
         {
@@ -97,6 +207,28 @@
             "Personal Org: isolated self-service analyst environments",
             "Deployment with data kits: sandbox → production",
             "Data Monitoring dashboard (DLO details, execution history)"
+          ],
+          "sources": [
+            {
+              "title": "Tableau Next Workspaces",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_workspace.htm&type=5"
+            },
+            {
+              "title": "Deploy Tableau Next Assets",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_deploy_sandbox.htm&type=5"
+            },
+            {
+              "title": "Deploy Tableau Next Assets in a Data Kit",
+              "url": "https://help.salesforce.com/s/articleView?id=analytics.tua_deploy_assets_datakit.htm&type=5"
+            },
+            {
+              "title": "Personal Org (release note, GA)",
+              "url": "https://help.salesforce.com/s/articleView?id=release-notes.rn_tua_exploratory_org_ga.htm&type=5"
+            },
+            {
+              "title": "Use CLI to Deploy Tableau Next Assets from Sandbox to Production",
+              "url": "https://developer.salesforce.com/docs/analytics/tableau-next-isv-dev/guide/tn-deploy-assets-using-cli.html"
+            }
           ]
         }
       ],
@@ -111,14 +243,29 @@
       ],
       "fieldIntel": {
         "source": "Real passer — Kanani Guyton (tracker F0C301AURRV, Rec0C4BHQ9J84), passed 2026-09-24. Per-section scores below from passer Henry's 2026-09-18 score report. Score-report 'hardest' label 'Catalog Management' = guide section 'Embedding, Cross-Cloud & Interoperability' (embed).",
-        "passerSectionScores": {"sem": 75, "agent": 80, "embed": 58, "admin": 83, "viz": 67, "ws": 50},
+        "passerSectionScores": {
+          "sem": 75,
+          "agent": 80,
+          "embed": 58,
+          "admin": 83,
+          "viz": 67,
+          "ws": 50
+        },
         "hammered": [
           "PDS (Tableau Published Data Source) — a direct connection, NOT represented as a DLO in Data 360; data access is not configured through Data 360 governance, and record-level security is inherited from the PDS [validated: analytics/264-0-0/tua_governance.html 'Tableau Published Data Source (PDS)', rel 3]",
           "RLS with vs. without PDS alignment — Tableau Next access is multi-layered (Salesforce permission sets + Data 360 governance policies + per-asset sharing); when data arrives via a PDS, RLS is inherited from the PDS instead [validated: analytics/264-0-0/tua_governance.html 'Data Governance and Sharing in Tableau Next', rel 4]",
           "MCP basics — Tableau Next Slack integration + MCP server (ask Slackbot about data); embed section",
           "Permission sets vs. licenses — know which enables what (admin section)"
         ]
-      }
+      },
+      "groundingGaps": [
+        "Tableau Next vs. CRM Analytics comparison (no dedicated article found)",
+        "Row-level security with and without Protected Data Sources (PDS) (only general governance article found)",
+        "Slack MCP server embedding steps (only referenced inside alerts articles)",
+        "Draft with Einstein and AI-generated descriptions (Beta) (not searched or not found as dedicated articles)",
+        "Guided setup flow and the Data Monitoring dashboard (no dedicated article found)",
+        "Verified questions setup (only a Service Insights release note found)"
+      ]
     },
     "mcnext": {
       "name": "Marketing Cloud Next Consultant",
@@ -142,6 +289,52 @@
             "Activation templates & contact points; source priority order",
             "Landing page components and configuration",
             "Badges: Email Content & Personalization + Campaign Optimization with Flows"
+          ],
+          "sources": [
+            {
+              "title": "Flow Marketing Cloud Updates (Release Notes, rel 264): lists marketing flow types and elements",
+              "url": "https://help.salesforce.com/s/articleView?id=release-notes.rn_automate_flow_marketing_cloud.htm&type=5"
+            },
+            {
+              "title": "Flow Limits per Org (includes Limits for Marketing Flows)",
+              "url": "https://help.salesforce.com/s/articleView?id=platform.flow_considerations_limit.htm&type=5"
+            },
+            {
+              "title": "Content Personalization in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_content_personalization.htm&type=5"
+            },
+            {
+              "title": "Personalize Content with Merge Fields in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_content_personalization_merge_fields.htm&type=5"
+            },
+            {
+              "title": "Manage Data Sources for Personalizing Content",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_content_personalization_data_sources.htm&type=5"
+            },
+            {
+              "title": "Create and Manage Variations in Marketing Content",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_content_personalization_create_variations.htm&type=5"
+            },
+            {
+              "title": "Standardize Activations by Using Activation Templates",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_activation_template.htm&type=5"
+            },
+            {
+              "title": "Contact Points and Source Priority Order",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_contact_points.htm&type=5"
+            },
+            {
+              "title": "Web Content in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_content_web.htm&type=5"
+            },
+            {
+              "title": "Create and Manage a Landing Page in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_content_lp_create.htm&type=5"
+            },
+            {
+              "title": "Set Up Channels in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_admin_setup_channels.htm&type=5"
+            }
           ]
         },
         {
@@ -155,6 +348,28 @@
             "Consumption entitlements & Digital Wallet — marketing-flavored credit scenarios",
             "Identity resolution match & reconciliation rules (refresher)",
             "Segmentation → activation path in MC Next context"
+          ],
+          "sources": [
+            {
+              "title": "Target Audiences with Marketing Cloud Next (segments and actionable lists)",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_audiences.htm&type=5"
+            },
+            {
+              "title": "Configure Identity Resolution Rulesets for Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_admin_data_identity_resolution.htm&type=5"
+            },
+            {
+              "title": "Unify Source Profiles",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_identity_resolution.htm&type=5"
+            },
+            {
+              "title": "Identity Resolution Reconciliation Rules",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_reconciliation_rules.htm&type=5"
+            },
+            {
+              "title": "Configure Your Marketing Data",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_admin_data_kits_ref.htm&type=5"
+            }
           ]
         },
         {
@@ -167,6 +382,44 @@
             "Business Units ↔ Data Spaces 1:1 — isolation scenarios; when BUs are required",
             "Roles + Enhanced CMS Workspaces for content governance",
             "Domain authentication vs. authorization (DKIM/SPF); dedicated IP guardrails"
+          ],
+          "sources": [
+            {
+              "title": "Deploy Data Kits for Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_admin_data_kits_install_main.htm&type=5"
+            },
+            {
+              "title": "User Permissions in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_admin_permissions_ref.htm&type=5"
+            },
+            {
+              "title": "Business Units in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mke_business_units.htm&type=5"
+            },
+            {
+              "title": "Create Business Units in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_bu_create_bus_in_mktg_cloud_next.htm&type=5"
+            },
+            {
+              "title": "Create Content in Marketing Cloud Next (CMS workspace roles and permission sets)",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_content_create.htm&type=5"
+            },
+            {
+              "title": "Domain Settings in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_admin_domains_ref.htm&type=5"
+            },
+            {
+              "title": "Configure Required Email Settings",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_admin_setup_email_verify_sender.htm&type=5"
+            },
+            {
+              "title": "Dedicated IP Provisioning in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_admin_dedicated_ip_provisioning.htm&type=5"
+            },
+            {
+              "title": "Dedicated IP Pools, Requirements, and Status",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_admin_dedicated_ip_ref.htm&type=5"
+            }
           ]
         },
         {
@@ -180,6 +433,32 @@
             "Creating/updating consent records: forms, flows, API — when each fits",
             "Consent banners on marketing and external landing pages",
             "Compliance framing: opt-in models, engagement rules"
+          ],
+          "sources": [
+            {
+              "title": "Comply with Privacy Regulations",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_admin_compliance.htm&type=5"
+            },
+            {
+              "title": "Understanding Consent Concepts in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_consent_tools_ref.htm&type=5"
+            },
+            {
+              "title": "Considerations for Managing Marketing Consent Data (default consent status)",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_consent_considerations.htm&type=5"
+            },
+            {
+              "title": "Import Consent Data to Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_consent_import_create.htm&type=5"
+            },
+            {
+              "title": "Track Activity on Marketing Landing Pages (consent banners)",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_tracking_landing_pages_parent.htm&type=5"
+            },
+            {
+              "title": "Considerations for Activity Tracking",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_tracking_considerations.htm&type=5"
+            }
           ]
         },
         {
@@ -191,6 +470,36 @@
             "Out-of-box Marketing Agents: campaign creation, audience gen, content gen",
             "Conversational messaging across SMS / email / WhatsApp",
             "Which predictive AI feature fits a scenario (STO, engagement scoring…)"
+          ],
+          "sources": [
+            {
+              "title": "Explore AI in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_einstein_learning_map.htm&type=5"
+            },
+            {
+              "title": "Enable AI Features in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_admin_setup_einstein.htm&type=5"
+            },
+            {
+              "title": "Manage Agentic Content in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_ac_create.htm&type=5"
+            },
+            {
+              "title": "Considerations for the Content Creation Agent in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_einstein_draft_content_considerations.htm&type=5"
+            },
+            {
+              "title": "Model Card: Einstein Send Time Optimization",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_einstein_model_card_esto.htm&type=5"
+            },
+            {
+              "title": "AI Reporting and Analytics in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_AI_analytics.htm&type=5"
+            },
+            {
+              "title": "Set Up Channels in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_admin_setup_channels.htm&type=5"
+            }
           ]
         },
         {
@@ -201,6 +510,24 @@
           "items": [
             "Pre-built dashboard catalog — which dashboard answers which requirement",
             "Surfacing marketing data & insights across the platform"
+          ],
+          "sources": [
+            {
+              "title": "Measure Success in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_reporting.htm&type=5"
+            },
+            {
+              "title": "Reporting in Marketing Cloud Next (dashboard catalog)",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_reporting_types.htm&type=5"
+            },
+            {
+              "title": "Set Up Reporting in Marketing Cloud Next",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_admin_setup_reporting.htm&type=5"
+            },
+            {
+              "title": "Marketing Performance Intelligence",
+              "url": "https://help.salesforce.com/s/articleView?id=mktg.mktg_marketing_performance_intelligence.htm&type=5"
+            }
           ]
         }
       ],
@@ -224,7 +551,15 @@
           "Consent checks are required for promotional email and any SMS/WhatsApp/RCS message; transactional-email consent checks are off by default [validated: mktg/264-0-0/mktg_consent_tools_ref.html 'Consent Check', rel 2]",
           "Exam technique from passers: 3-option multiple choice, generally easier than other SF exams — read article terminology closely and eliminate weak answers"
         ]
-      }
+      },
+      "groundingGaps": [
+        "Marketing flow types: no conceptual article found; only release notes and the flow limits page",
+        "Marketing Cloud Next Digital Wallet and credit consumption scenarios: only generic Data 360 billing and Digital Wallet articles found",
+        "Creating and updating consent records via forms, flows and API: only import and preference-page coverage found",
+        "Roles and Enhanced CMS Workspaces: only the permission/role tables inside content articles found, no dedicated article",
+        "Platform consent object model and relationships: not found for Marketing Cloud Next specifically",
+        "Conversational messaging across SMS, email and WhatsApp: only channel setup and Unified WhatsApp found"
+      ]
     },
     "data360": {
       "name": "Data 360 Consultant",
@@ -245,6 +580,16 @@
             "Data 360's foundational role in generative and predictive AI",
             "Identifying initial use cases for Data 360",
             "Principles of data ethics and governance"
+          ],
+          "sources": [
+            {
+              "title": "Data 360 Architecture (Architect guide)",
+              "url": "https://architect.salesforce.com/docs/architect/fundamentals/guide/data-360-architecture.html"
+            },
+            {
+              "title": "Data Objects in Data 360",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_data_lake_objects.htm&type=5"
+            }
           ]
         },
         {
@@ -258,6 +603,24 @@
             "Apply data governance requirements to platform configuration",
             "Manage the development lifecycle with available tooling",
             "Diagnose and troubleshoot common issues with tooling"
+          ],
+          "sources": [
+            {
+              "title": "Secure Your Data with Data Spaces",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_data_spaces_secure_data.htm&type=5"
+            },
+            {
+              "title": "Data 360 Governance Permissions",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_manage_tags_classifications_taxonomies_policies.htm&type=5"
+            },
+            {
+              "title": "Data 360 in a Sandbox",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_data_cloud_sandbox.htm&type=5"
+            },
+            {
+              "title": "Deploy Data Kits Across Data Spaces (release note)",
+              "url": "https://help.salesforce.com/s/articleView?id=release-notes.rn_cdp_2026_spring_deploy_datakits_locally_across_dataspaces.htm&type=5"
+            }
           ]
         },
         {
@@ -270,6 +633,28 @@
             "Data transformation capabilities within Data 360",
             "Ingestion processes & considerations from varied sources",
             "Data collaboration capabilities, including Zero-Copy"
+          ],
+          "sources": [
+            {
+              "title": "Data Stream Schedule in Data 360",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_data_stream_schedule.htm&type=5"
+            },
+            {
+              "title": "Ingestion API (Integration Guide)",
+              "url": "https://developer.salesforce.com/docs/data/data-cloud-int/guide/c360-a-ingestion-api.html"
+            },
+            {
+              "title": "Data Cleansing and Preparation (batch and streaming transforms)",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_cleansing_data.htm&type=5"
+            },
+            {
+              "title": "Zero Copy Data Federation and Data Sharing (Architect guide)",
+              "url": "https://architect.salesforce.com/docs/architect/fundamentals/guide/data-360-architecture.html"
+            },
+            {
+              "title": "Use the Snowflake Zero-Copy V2 Connector (release note)",
+              "url": "https://help.salesforce.com/s/articleView?id=release-notes.rn_cdp_2026_summer_snowflake_v2.htm&type=5"
+            }
           ]
         },
         {
@@ -281,6 +666,28 @@
           "items": [
             "Purpose, process, and supported use cases of unification (identity resolution)",
             "Data modeling in Data 360 (DMOs, mapping)"
+          ],
+          "sources": [
+            {
+              "title": "Identity Resolution Rulesets",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_identity_resolution_ruleset.htm&type=5"
+            },
+            {
+              "title": "Identity Resolution Match Rules",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_match_rules.htm&type=5"
+            },
+            {
+              "title": "Identity Resolution Reconciliation Rules",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_reconciliation_rules.htm&type=5"
+            },
+            {
+              "title": "Data Objects in Data 360 (DLO and DMO)",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_data_lake_objects.htm&type=5"
+            },
+            {
+              "title": "Data 360 Auto Mapping Model Card",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_auto_mapping_model_card.htm&type=5"
+            }
           ]
         },
         {
@@ -293,6 +700,16 @@
             "Reference Data 360 data from other systems",
             "View and build reports and dashboards using Data 360",
             "Apply predictive & generative AI tooling to customer scenarios"
+          ],
+          "sources": [
+            {
+              "title": "Enhance Data with Insights (calculated, streaming, real-time)",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_insights.htm&type=5"
+            },
+            {
+              "title": "Zero Copy Data Federation and Data Sharing (Architect guide)",
+              "url": "https://architect.salesforce.com/docs/architect/fundamentals/guide/data-360-architecture.html"
+            }
           ]
         },
         {
@@ -307,6 +724,28 @@
             "Publish activations within Data 360",
             "Act on data",
             "Use Data 360 in Salesforce flows"
+          ],
+          "sources": [
+            {
+              "title": "Create Segments in Data 360",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_segments.htm&type=5"
+            },
+            {
+              "title": "Create an Activation for a Data 360 Target",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_create_data_cloud_activation.htm&type=5"
+            },
+            {
+              "title": "Create an Activation for File Storage Target",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_add_activation_target.htm&type=5"
+            },
+            {
+              "title": "Activate Segments Using Rapid Publish (release note)",
+              "url": "https://help.salesforce.com/s/articleView?id=release-notes.rn_cdp_2026_summer_rapid_publish_data_360_targets.htm&type=5"
+            },
+            {
+              "title": "Trigger Flows with Data 360 Data",
+              "url": "https://help.salesforce.com/s/articleView?id=platform.flow_concepts_trigger_data_cloud.htm&type=5"
+            }
           ]
         }
       ],
@@ -318,11 +757,279 @@
         "Session 4 (2 hrs): Data Activations & Utilization — segmentation concepts, managing segments, publishing activations, acting on data, Data 360 in flows (biggest section at 20%)",
         "Session 5 (1.5 hrs): Data Enhancements/Sharing/Analysis — calculated insights, referencing Data 360 elsewhere, reports/dashboards, predictive & generative AI tooling; then a verify pass on Setup & Administration",
         "Hands-on multiplier: in a demo org, ingest one source → run unification → build a calculated insight → publish an activation. Seeing the pipeline end-to-end beats hours of reading."
+      ],
+      "groundingGaps": [
+        "Solution positioning, terminology, use cases and data ethics (only the Architect guide found; no dedicated Help article)",
+        "Troubleshooting and the development lifecycle beyond sandbox/data kits (not found as dedicated articles)",
+        "Reports and dashboards on Data 360 data (no article found)",
+        "Predictive AI (Einstein Studio) and generative AI grounding with Data 360 (search returned only industry-specific articles)",
+        "Segment management details: segment types, publish schedules, and dependencies (only create and activation articles found)",
+        "Data sharing with data collaboration beyond Snowflake (not searched individually)"
+      ]
+    },
+    "agentforce": {
+      "name": "Agentforce Specialist",
+      "short": "Agentforce",
+      "passPct": 72,
+      "passNote": "60 scored questions (+ up to 5 unscored) · 105 min · 72% to pass (~44 correct) · Spring '26 release · English, French, Japanese · no prerequisite",
+      "price": "$200 / $100 retake",
+      "trail": "Exam guide recommends earning Agentblazer Status on Trailhead (no dedicated prep-trail URL published in the guide). Recommended, not required: Platform Administrator and Platform App Builder certs.",
+      "sections": [
+        {
+          "id": "prompt",
+          "name": "Prompt Engineering",
+          "weight": 20,
+          "gap": "Core",
+          "note": "Not just writing prompts — access controls, template types, grounding choice, Trust Layer, and model access are all in scope. Prompt Builder access is via the Prompt Template Manager permission set (Manage + Execute Prompt Templates) or Customize Application [validated: Salesforce Help, Agentforce docs rel 264]. Trust Layer data masking is disabled for agents (it still applies to embedded generative AI features) [validated: Salesforce Help, ai.agent_trust_data_masking, rel 264].",
+          "items": [
+            "Given business requirements, identify when it's appropriate to use Prompt Builder",
+            "Identify access controls governing prompt templates",
+            "Identify the considerations for using a prompt template type such as field generation and flex types",
+            "Given a scenario, identify the appropriate grounding technique",
+            "Explain the process for creating, activating, and executing prompt templates",
+            "Explain how to implement best practices for writing effective prompts",
+            "Identify the security and privacy features of the Trust Layer (e.g. data masking, toxicity detection, audit trail stored in Data 360) [validated: Salesforce Help, Agentforce docs rel 264]",
+            "Explain how to manage and prevent specific models from being accessed"
+          ],
+          "sources": [
+            {
+              "title": "Activate and Deactivate Prompt Templates",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.prompt_builder_activate_deactivate_templates.htm&type=5"
+            },
+            {
+              "title": "Add Record Merge Fields to a Field Generation Template",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.prompt_builder_add_merge_fields_field_gen.htm&type=5"
+            },
+            {
+              "title": "Add Record Merge Fields to a Flex Template",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.prompt_builder_add_merge_fields_flex.htm&type=5"
+            },
+            {
+              "title": "Grounding with Apex Merge Fields",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.prompt_builder_ground_apex.htm&type=5"
+            },
+            {
+              "title": "Grounding with Related List Merge Fields",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.prompt_builder_ground_related_list.htm&type=5"
+            },
+            {
+              "title": "Add Flow Merge Fields to a Flex Template",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.prompt_builder_add_flows_flex.htm&type=5"
+            },
+            {
+              "title": "Best Practices for Building Prompt Templates",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.prompt_builder_best_practices.htm&type=5"
+            },
+            {
+              "title": "Ingredients of a Prompt Template",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.prompt_builder_template_ingredients.htm&type=5"
+            },
+            {
+              "title": "Trust and Agentforce",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.copilot_trust.htm&type=5"
+            },
+            {
+              "title": "Data Masking Limitations in Agentforce",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&type=5"
+            },
+            {
+              "title": "Audit Trail",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.generative_ai_audit_trail.htm&type=5"
+            }
+          ]
+        },
+        {
+          "id": "d360",
+          "name": "Data 360 Fundamentals",
+          "weight": 20,
+          "gap": "Medium",
+          "note": "Narrow scope — only two objectives, but 20% of the exam. Agentforce Data Library indexes knowledge articles/fields, file uploads, or web sources for grounding; a data library can also point at a custom retriever, which must exist in the home org [validated: Salesforce Help, Agentforce docs rel 264]. Overlaps with the Data 360 Consultant exam.",
+          "items": [
+            "Explain the considerations of Agentforce Data Library and its concepts",
+            "Explain foundational concepts of Data 360 such as chunking, indexing, and retrievers"
+          ],
+          "sources": [
+            {
+              "title": "Agentforce Data Library",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.data_library_parent.htm&type=5"
+            },
+            {
+              "title": "Use a Custom Retriever",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.data_library_custom_retriever.htm&type=5"
+            },
+            {
+              "title": "Test Data Libraries in a Sandbox",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.data_library_sandbox.htm&type=5"
+            },
+            {
+              "title": "Using Retrieval Augmented Generation",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_rag_overview.htm&type=5"
+            },
+            {
+              "title": "Retrieval Response with Enriched Search Index",
+              "url": "https://help.salesforce.com/s/articleView?id=data.c360_a_retrieval_response_enriched_index.htm&type=5"
+            }
+          ]
+        },
+        {
+          "id": "agents",
+          "name": "AI Agents",
+          "weight": 35,
+          "gap": "Core",
+          "note": "The biggest section by far — over a third of the exam. Built around next-gen authoring (Agent Script). Current docs say 'subagents' where the exam guide says 'topics' — expect either term. Canvas view and Script view edit the same Agent Script; Script-view errors can make Canvas view unavailable until fixed [validated: Salesforce Help, Agentforce docs rel 264]. Execution context is heavily testable: Employee agents run as the logged-in user; Service agents run as the agent user unless credential-based user verification is on, and context variables pass identity but do NOT restrict data access [validated: Salesforce Help, Agentforce docs rel 264].",
+          "items": [
+            "Explain how an agent works and its basic building blocks of agent script",
+            "Explain the components and benefits of hybrid reasoning, including how Agent Script functions in Canvas and Script View",
+            "Given a use case, manage deterministic behavior for the agent using mechanisms like filters, variables, and template expressions",
+            "Given a scenario, select and configure standard topics, custom topics, standard Agent actions, and custom Agent actions",
+            "Explain the process for connecting agents to various channels such as digital experience, email, voice, and Slack",
+            "Explain the security context in which the agent is actually running, and how it impacts agent action execution",
+            "Given a scenario, identify when to use an Employee or Service agent",
+            "Given a scenario, identify when it's appropriate to use Agent API"
+          ],
+          "sources": [
+            {
+              "title": "Agent Script",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_script.htm&type=5"
+            },
+            {
+              "title": "Building Agents in Canvas View",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_canvas.htm&type=5"
+            },
+            {
+              "title": "Example: More Reliable Instructions with Agent Script",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_example_script_before_after.htm&type=5"
+            },
+            {
+              "title": "An Agentforce Guide to Context Engineering",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_context_engineering.htm&type=5"
+            },
+            {
+              "title": "Agent Execution Context and Data Access by Type",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_execution_data.htm&type=5"
+            },
+            {
+              "title": "Agentforce Builder Considerations",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_considerations.htm&type=5"
+            },
+            {
+              "title": "Connect an Agent to Messaging",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_parent_deploy_messaging.htm&type=5"
+            },
+            {
+              "title": "Get Started with Agentforce APIs and SDKs",
+              "url": "https://developer.salesforce.com/docs/ai/agentforce/guide/get-started-agents.html"
+            },
+            {
+              "title": "Call an Agent from a Flow or Apex Class",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_custom_invocable_action_flow_apex.htm&type=5"
+            },
+            {
+              "title": "Use Agentforce to Invoke External Service Actions",
+              "url": "https://help.salesforce.com/s/articleView?id=platform.external_services_custom_agent_actions.htm&type=5"
+            }
+          ]
+        },
+        {
+          "id": "test",
+          "name": "Testing, Deployment, and Maintenance",
+          "weight": 10,
+          "gap": "Medium",
+          "note": "Testing Center default evaluations: response accuracy, subagent assertion, action assertion; optional quality evaluations: completeness, coherence, conciseness, latency, instruction adherence. Tests can be AI-generated, built from Data Library content, or uploaded via CSV [validated: Salesforce Help, Agentforce docs rel 264].",
+          "items": [
+            "Given a scenario, test an agent using Testing Center",
+            "Explain how Testing Center evaluations work",
+            "Identify the considerations for deploying an agent from sandbox to production",
+            "Identify the considerations for deploying a template from sandbox to production"
+          ],
+          "sources": [
+            {
+              "title": "Agentforce Testing Center",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_testing_center.htm&type=5"
+            },
+            {
+              "title": "Choose Evaluations",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_testing_center_evaluations.htm&type=5"
+            },
+            {
+              "title": "Test Agents (Agentforce Studio)",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_studio_testing_center_test_agents.htm&type=5"
+            },
+            {
+              "title": "Considerations for MCP for Agentforce",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_mcp_considerations.htm&type=5"
+            }
+          ]
+        },
+        {
+          "id": "gov",
+          "name": "Governance and Observability",
+          "weight": 10,
+          "gap": "Medium",
+          "note": "Monitoring and improving live agents rather than building them.",
+          "items": [
+            "Explain the process for managing and monitoring agents",
+            "Explain agent analytics and agent optimization"
+          ],
+          "sources": [
+            {
+              "title": "Agentforce Session Tracing",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.generative_ai_session_trace.htm&type=5"
+            },
+            {
+              "title": "About Agent Analytics",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.generative_ai_agent_analytics_about.htm&type=5"
+            },
+            {
+              "title": "About Agent Optimization",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.generative_ai_optimize_about.htm&type=5"
+            }
+          ]
+        },
+        {
+          "id": "multi",
+          "name": "Multi-Agent Orchestration",
+          "weight": 5,
+          "gap": "Medium",
+          "note": "Only 5% — know the 'when' and the 'why', not the details. Multi-agent orchestration connects Agentforce agents with other specialized agents in the same org. MCP for Agentforce supports Streamable HTTP servers, no-auth or OAuth 2.0 client credentials only, server tools only (no prompts/resources), no user-level auth [validated: Salesforce Help, Agentforce docs rel 264]. A2A is named in the guide; not yet confirmed in the docs search — verify before relying on specifics.",
+          "items": [
+            "Given a scenario, determine whether a Multi Agent architecture is appropriate for scalability and control",
+            "Explain the purpose of existing open standard multi-agent protocols such as MCP and A2A"
+          ],
+          "sources": [
+            {
+              "title": "Multi-Agent Orchestration",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_multi_orch.htm&type=5"
+            },
+            {
+              "title": "Extend Your Agentforce Implementation",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_parent_extend.htm&type=5"
+            },
+            {
+              "title": "Considerations for MCP for Agentforce",
+              "url": "https://help.salesforce.com/s/articleView?id=ai.agent_mcp_considerations.htm&type=5"
+            }
+          ]
+        }
+      ],
+      "skips": "Out of scope per the official guide: configuring/fine-tuning LLMs, coding (Apex, Python), external AI tools, transformer architecture, ROI or white-space analysis, and Marketing Cloud, Heroku, Agentforce Commerce, MuleSoft, Tableau, Slack (beyond connecting an agent to a Slack channel), Quip, and Industry solutions. Don't spend time on any of it.",
+      "sequence": [
+        "Session 1 (2.5 hrs): AI Agents, part 1 — Agent Script building blocks, hybrid reasoning, Canvas vs. Script view, deterministic control (filters, variables, template expressions)",
+        "Session 2 (2 hrs): AI Agents, part 2 — topics/subagents and actions (standard vs. custom), channels, execution context (agent user vs. logged-in user), Employee vs. Service agent, when to use Agent API",
+        "Session 3 (2 hrs): Prompt Engineering — when to use Prompt Builder, template types (field generation, flex, etc.), grounding techniques, create/activate/execute lifecycle, access controls, Trust Layer, restricting model access",
+        "Session 4 (1.5 hrs): Data 360 Fundamentals — Agentforce Data Library, chunking, indexing, retrievers (verify-only if you've passed Data 360 Consultant)",
+        "Session 5 (1.5 hrs): Testing Center evaluations, sandbox→production deployment for agents and templates, monitoring/analytics/optimization, and a quick pass on multi-agent + MCP/A2A",
+        "Hands-on multiplier: in a demo org, build one agent in Agentforce Builder with a custom action and a Data Library, ground a flex prompt template, run a Testing Center suite, and switch between Canvas and Script view. That covers the bulk of the 35% section."
+      ],
+      "groundingGaps": [
+        "Restricting access to specific models (Prompt Engineering objective)",
+        "A2A protocol",
+        "Sandbox-to-production deployment of prompt templates and agents (only MCP and Data Library limits found)"
       ]
     }
   },
   "crossExamCheats": {
-    "sharedBackbone": "Study once, use across exams: DMOs, identity resolution, segmentation, Data 360 provisioning, consumption/credits, and Agentforce grounding concepts. All three exams reward 'agent readiness' — clean metadata, good descriptions, governed access.",
+    "sharedBackbone": "Study once, use across exams: DMOs, identity resolution, segmentation, Data 360 provisioning, consumption/credits, and Agentforce grounding concepts. All four exams reward 'agent readiness' — clean metadata, good descriptions, governed access. Agentforce Specialist ⇄ Data 360: the Data 360 Fundamentals section (Data Library, chunking, indexing, retrievers) overlaps with Data 360 grounding/RAG — study once, apply to both.",
     "technique": [
       "These are consultant exams: answers favor 'given a scenario, what would you advise' — pick the governed, out-of-box, lowest-maintenance option over the clever custom one.",
       "Watch for Beta-labeled features (e.g. Semantic Model AI Optimization, AI-Generated Descriptions, Inspector proactive alerts) — new exams love testing brand-new features.",
